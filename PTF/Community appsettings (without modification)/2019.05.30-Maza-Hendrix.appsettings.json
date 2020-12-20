@@ -1,0 +1,1541 @@
+
+{
+	"PtFeeder": {
+		"BaseCurrency": "ETH",
+
+		"MaxTrailingProfit":"0.3",
+			"MinTrailingProfit":"0.01",
+			"MaxTrailingBuy":"0.3",
+			"MinTrailingBuy":"0.01",
+			"DcaMaxTrailingBuy":"0.3",
+			"OrderbookProfitCalculation":"true",
+			"DcaMaxTrailingProfit":"0.3",
+			"DcaMinTrailingProfit":"0.1",
+			"DcaMinTrailingBuy":"0.1",
+
+   		//"EnabledCoinsOnly": "BAT,BTG,ZEC,ONT,MKR,NEO,XEM,ATOM,ETC,XTZMIOTA,DASH,XMR,TRX,ADA,XLM,USDT,BSV,LTC,EOS,BCH,XRP,ETH,BTC", TOP25
+		//"EnabledCoinsOnly": "BTC,BCH,LTC,XRP,XLM,DASH,XMR,EOS,TRX,BCH,ADA,EOS,BSV,ETC",
+		"HiddenCoins": "XRP,BNB",
+		"ExcludedCoins": "XRP,BNB",
+		"DcaExcludedCoins": "",
+		"SomOnlyCoins": "AION,AMB,ARN,BCHABC,BCHSV,BCPT,BLZ,BQX,CDT,CMT,DLT,DOCK,ENJ,EVX,GRS,ICX,LOOM,LRC,LSK,MITH,NPXS,OMG,QKC,QTUM,REN,SNT,VET,WABI,WAN,WTC,ZEC", // Black-list 2019.04.15
+		"MeasureTimes": [
+			15,			// 15 min		// 1
+			60,			// 1h				// 2
+			240,		// 4h				// 3
+			360,		// 6h				// 4
+			1440,   // 24h			// 5
+			4320		// 3 jours	// 6
+		],
+		"TopCoinTrendChangeCoins": "",
+		"TopCurrenciesToCheck": "35",
+		"FeederCandleSize": "30m",
+		"VwmaLength": "2",
+		"VwmaLookBackPeriod": "2",
+		"EmaShortCandleSize": "30m",
+		"EmaLongCandleSize": "1d",
+		"EmaShortPeriod": "5",
+		"EmaLongPeriod": "20",
+		"EmaFastLength": "8",
+		"EmaSlowLength": "13",
+		"EmaLength": "8",
+		"SmaShortCandleSize": "30m",
+		"SmaLongCandleSize": "1d",
+		"SmaFastLength": "21",
+		"SmaSlowLength": "55",
+		"SmaShortPeriod": "5",
+		"SmaLongPeriod": "20",
+		"RsiLongPeriod": "20",
+		"RsiCandlePeriod": "5",
+		"RsiShortPeriod": "5",
+		"RsiShortCandleSize": "30m",
+		"RsiLongCandleSize": "1h",
+		"StochShortCandleSize": "30m",
+		"StochLongCandleSize": "1h",
+		"StochKPeriod": "30m",
+		"StochDPeriod": "30m",
+		"StochKLength": "1",
+		"StochDLength": "5",
+		"StochLength": "5",
+		"MacdLongPeriod": "20",
+		"MacdShortPeriod": "5",
+		"MacdPeriod": "5",
+		"MacdShortCandleSize": "30m",
+		"MacdLongCandleSize": "1h",
+		"HmaShortCandleSize": "30m",
+		"HmaLongCandleSize": "1h",
+		"BaseHighLowPriceChangeCandleSize": "30m",
+		"HighestCandlesSize": "30m",
+		"LowestCandlesSize": "30m",
+		"VwapLongPeriod": "10",
+		"VwapShortPeriod": "5",
+		"VwapShortCandleSize": "30m",
+		"VwapLongCandleSize": "30m"
+	},
+
+	"Common": {
+		"BtcDust": "0.000999",
+    "EthDust": "0.00999",
+    "UsdtDust": "9.99",
+    "BnbDust": "0.0105",
+
+		"OrderbookProfitCalculation": "true",
+
+		"DcaSomDcaBuyTrigger": "-200",
+		"MaxTradingPairs": "10",
+
+		"StartBalance": "10",
+		"KeepBalance": "0",
+		"KeepBalancePercentage": "0",
+		"DcaKeepBalance": "0",
+		"DcaKeepBalancePercentage": "0",
+		//
+		"ConsecutiveBuyTrigger": "6",
+		"ConsecutiveSellTrigger": "2",
+		//
+		"PriceTriggerMarket": "ETH",
+    "PriceDropTrigger": "5",
+    "PriceDropRecoverTrigger": "2",
+    "PriceRiseTrigger": "5",
+    "PriceRiseRecoverTrigger": "2",
+	},
+	"Defaults": {
+
+
+
+
+		  "IndicatorsEmaCandlePeriod": "1800",
+		  "IndicatorsEmaCrossCandles": "80",
+		  "IndicatorsEmaFastLength": "8",
+		  "IndicatorsEmaSlowLength": "13",
+
+		  "IndicatorsMac": "3",
+
+
+
+
+
+		  //-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+		  //-------------------------------------------------------------------------------------------------------------------------------------------------
+		  // 1/5 - SUPEROURS//1D CANDLES XS
+		  //-------------------------------------------------------------------------------------------------------------------------------------------------
+			//A -LOWBB 4 HEURES-
+			//B Emadouze Maza - EMAGAIN 12 HEURES-
+			//C EMACROSS //
+		  "IndicatorsEmaCrossMazaXsCandlePeriod": "86400",//mazaconfigok
+		  "IndicatorsEmaCrossMazaXsCrossCandles": "15",//mazaconfigok
+		  "IndicatorsEmaCrossMazaXsFastLength": "3",//mazaconfigok
+		  "IndicatorsEmaCrossMazaXsSlowLength": "24",//mazaconfigok
+		  "IndicatorsEmaCrossMazaXsLength": "10",//mazaconfigok
+		  "IndicatorsEmaCrossMazaXsStd": "2",//mazaconfigok
+
+			//D RSI //
+		  "IndicatorsRsiMazaXsCandlePeriod": "86400",//mazaconfigok
+		  "IndicatorsRsiMazaXsLength": "14",//mazaconfigok
+			//E STOCH //
+		 	"IndicatorsStochMazaxSCandlePeriod": "86400",//mazaconfigok
+		 	"IndicatorsStochMazaxSD": "3",//mazaconfigok
+		 	"IndicatorsStochMazaxSK": "3",//mazaconfigok
+		 	"IndicatorsStochMazaxSLength": "14",//mazaconfigok
+			//F
+			//G MACD
+			"IndicatorsMacdMazaXsCandlePeriod": "14400",//mazaconfigok
+		  "IndicatorsMacdMazaXsSignal": "9",//mazaconfigok
+		  "IndicatorsMacdMazaXsSlowLength": "26",//mazaconfigok
+		  "IndicatorsMacdMazaXsFastLength": "12",//mazaconfigok
+			//H
+			"IndicatorsStochrsidMazaXsCandlePeriod": "14400",//mazaconfigok
+			"IndicatorsStochrsidMazaXsRsiLength": "14",//mazaconfigok
+			"IndicatorsStochrsidMazaXsStochLength": "14",//mazaconfigok
+			"IndicatorsStochrsidMazaXsK": "3",//mazaconfigok
+			"IndicatorsStochrsidMazaXsD": "3",//mazaconfigok
+
+		  //I OBV //
+		  "IndicatorsObvMazaXsCandlePeriod": "1800",//mazaconfigok
+		  "IndicatorsObvMazaXsLength": "50",//mazaconfigok
+		  "IndicatorsObvMazaXsSignal": "1",//mazaconfigok
+
+
+
+		  //-------------------------------------------------------------------------------------------------------------------------------------------------
+		  // 2/5 - OURS// 4H CANDLES S
+		  //-------------------------------------------------------------------------------------------------------------------------------------------------
+			//A -LOWBB 4 HEURES-
+			//B Emadouze Maza - EMAGAIN 12 HEURES-
+			//C EMACROSS //
+			"IndicatorsEmaCrossMazaSCandlePeriod": "14400",//okconfigmaza
+			"IndicatorsEmaCrossMazaSCrossCandles": "15",//okconfigmaza
+			"IndicatorsEmaCrossMazaSFastLength": "3",//okconfigmaza
+			"IndicatorsEmaCrossMazaSSlowLength": "24",//okconfigmaza
+			"IndicatorsEmaCrossMazaSLength": "10",//okconfigmaza
+			"IndicatorsEmaCrossMazaSStd": "2",//okconfigmaza
+
+			//D RSI //
+		  "IndicatorsRsiMazaSCandlePeriod": "14400",//mazaconfigok
+		  "IndicatorsRsiMazaSLength": "14",//mazaconfigok
+			//E STOCH
+			"IndicatorsStochMazaSCandlePeriod": "14400",//mazaconfigok
+			"IndicatorsStochMazaSD": "3",//mazaconfigok
+			"IndicatorsStochMazaSK": "3",//mazaconfigok
+			"IndicatorsStochMazaSLength": "14",//mazaconfigok
+			//F
+			//G MACD //
+			"IndicatorsMacdMazaSCandlePeriod": "14400",//mazaconfigok
+		  "IndicatorsMacdMazaSSignal": "9",//mazaconfigok
+		  "IndicatorsMacdMazaSSlowLength": "26",//mazaconfigok
+		  "IndicatorsMacdMazaSFastLength": "12",//mazaconfigok
+			//H STOCHRSID  //
+			"IndicatorsStochrsidMazaSCandlePeriod": "14400",//mazaconfigok
+		 "IndicatorsStochrsidMazaSRsiLength": "14",//mazaconfigok
+		 "IndicatorsStochrsidMazaSStochLength": "14",//mazaconfigok
+		 "IndicatorsStochrsidMazaSK": "3",//mazaconfigok
+		 "IndicatorsStochrsidMazaSD": "3",//mazaconfigok
+
+		 "IndicatorsStochrsikMazaSCandlePeriod": "3600",
+		 "IndicatorsStochrsikMazaRsiSLength": "2",
+		 "IndicatorsStochrsikMazaStochSLength": "5",
+		 "IndicatorsStochrsikMazaSK": "3",
+		 "IndicatorsStochrsikMazaSD": "3",
+		  //I OBV //
+		  "IndicatorsObvMazaSCandlePeriod": "1800",//mazaconfigok
+		  "IndicatorsObvMazaSLength": "50",//mazaconfigok
+		  "IndicatorsObvMazaSSignal": "1",//mazaconfigok
+		  //-------------------------------------------------------------------------------------------------------------------------------------------------
+		  // 3/5 - NORMAL 1H CANDLES M
+		  //-------------------------------------------------------------------------------------------------------------------------------------------------
+			//A -LOWBB 4 HEURES-
+			//B Emadouze Maza - EMAGAIN 12 HEURES-
+			//C EMACROSS //
+			"IndicatorsEmaCrossMazaMCandlePeriod": "3600",//mazaconfigok
+			"IndicatorsEmaCrossMazaMCrossCandles": "15",//mazaconfigok
+			"IndicatorsEmaCrossMazaMFastLength": "3",//mazaconfigok
+			"IndicatorsEmaCrossMazaMSlowLength": "24",//mazaconfigok
+			"IndicatorsEmaCrossMazaMLength": "10",//mazaconfigok
+			//D RSI //
+		  "IndicatorsRsiMazaMCandlePeriod": "3600",//mazaconfigok
+		  "IndicatorsRsiMazaMLength": "14",//mazaconfigok
+			//E STOCH //
+		  "IndicatorsStochMazaMCandlePeriod": "3600",//mazaconfigok
+		  "IndicatorsStochMazaMD": "3",//mazaconfigok
+		  "IndicatorsStochMazaMK": "3",//mazaconfigok
+		  "IndicatorsStochMazaMLength": "14",//mazaconfigok
+			//F
+			//G MACD //
+			"IndicatorsMacdMazaMCandlePeriod": "3600",//mazaconfigok
+			"IndicatorsMacdMazaMSignal": "9",//mazaconfigok
+			"IndicatorsMacdMazaMSlowLength": "26",//mazaconfigok
+			"IndicatorsMacdMazaMFastLength": "12",//mazaconfigok
+			//H STOCHRSID //
+			"IndicatorsStochrsidMazaMCandlePeriod": "3600",//mazaconfigok
+		 "IndicatorsStochrsidMazaMRsiLength": "14",//mazaconfigok
+		 "IndicatorsStochrsidMazaMStochLength": "14",//mazaconfigok
+		 "IndicatorsStochrsidMazaMK": "3",//mazaconfigok
+		 "IndicatorsStochrsidMazaMD": "3",//mazaconfigok
+
+			 "IndicatorsStochrsikMazaMCandlePeriod": "3600",
+			 "IndicatorsStochrsikRsiMazaMLength": "2",
+			 "IndicatorsStochrsikStochMazaMLength": "5",
+			 "IndicatorsStochrsikKMazaM": "3",
+			 "IndicatorsStochrsikDMazaM": "3",
+
+			//I OBV
+			"IndicatorsObvMazaMCandlePeriod": "1800",//mazaconfigok
+			"IndicatorsObvMazaMLength": "50",//mazaconfigok
+			"IndicatorsObvMazaMSignal": "1",//mazaconfigok
+
+		  //-------------------------------------------------------------------------------------------------------------------------------------------------
+		  // 4/5 - TAUREAU 30 MINUTES CANDLES L
+		  //-------------------------------------------------------------------------------------------------------------------------------------------------
+			//A -LOWBB 4 HEURES-
+			//B Emadouze Maza - EMAGAIN 12 HEURES-
+			//C EMACROSS //
+			"IndicatorsEmaCrossMazaLCandlePeriod": "1800",//mazaconfigok
+			"IndicatorsEmaCrossMazaLCrossCandles": "15",//mazaconfigok
+			"IndicatorsEmaCrossMazaLFastLength": "3",//mazaconfigok
+			"IndicatorsEmaCrossMazaLSlowLength": "24",//mazaconfigok
+			"IndicatorsEmaCrossMazaLLength": "10",//mazaconfigok
+			//D RSI  //
+		  "IndicatorsRsiMazaLCandlePeriod": "1800",//mazaconfigok
+		  "IndicatorsRsiMazaLLength": "14",//mazaconfigok
+
+		  //E STOCH //
+		  "IndicatorsStochMazaLCandlePeriod": "1800",//mazaconfigok
+		  "IndicatorsStochMazaLD": "3",//mazaconfigok
+		  "IndicatorsStochMazaLK": "3",//mazaconfigok
+		  "IndicatorsStochMazaLLength": "14",//mazaconfigok
+			//F
+			//G
+			//H STOCHRSID //
+			"IndicatorsStochrsidMazaLCandlePeriod": "3600",//mazaconfigok
+			"IndicatorsStochrsidRsiMazaLLength": "14",//mazaconfigok
+			"IndicatorsStochrsidStochMazaLLength": "14",//mazaconfigok
+			"IndicatorsStochrsidKMazaL": "3",//mazaconfigok
+			"IndicatorsStochrsidDMazaL": "3",//mazaconfigok
+
+			"IndicatorsStochrsikMazaLCandlePeriod": "3600",
+			"IndicatorsStochrsikRsiMazaLLength": "14",
+			"IndicatorsStochrsikStochMazaLLength": "14",
+			"IndicatorsStochrsikKMazaL": "3",
+			"IndicatorsStochrsikDMazaL": "3",
+
+			//I OBV //
+			"IndicatorsObvMazaLCandlePeriod": "1800",//mazaconfigok
+		  "IndicatorsObvMazaLLength": "50",//mazaconfigok
+		  "IndicatorsObvMazaLSignal": "1",//mazaconfigok
+
+		  //-------------------------------------------------------------------------------------------------------------------------------------------------
+		  // 5/5 - SUPERTAUREAU 15MINUTES CANDLES XL
+		  //-------------------------------------------------------------------------------------------------------------------------------------------------
+			//A -LOWBB 4 HEURES-
+			//B Emadouze Maza - EMAGAIN 12 HEURES-
+			//C EMA CROSS //
+			"IndicatorsEmaCrossMazaXlCandlePeriod": "900",//mazaconfigok
+			"IndicatorsEmaCrossMazaXlCrossCandles": "15",//mazaconfigok
+			"IndicatorsEmaCrossMazaXlFastLength": "3",//mazaconfigok
+			"IndicatorsEmaCrossMazaXlSlowLength": "24",//mazaconfigok
+			"IndicatorsEmaCrossMazaXlLength": "8",//mazaconfigok
+			//D RSI //
+		  "IndicatorsRsiMazaXlCandlePeriod": "900",//mazaconfigok
+		  "IndicatorsRsiMazaXlLength": "14",//mazaconfigok
+
+		  //E STOCH //
+		  "IndicatorsStochMazaXlCandlePeriod": "900",//mazaconfigok
+		  "IndicatorsStochMazaXlD": "3",//mazaconfigok
+		  "IndicatorsStochMazaXlK": "3",//mazaconfigok
+		  "IndicatorsStochMazaXlLength": "14",//mazaconfigok
+			//F
+			//G MACD //
+			"IndicatorsMacdMazaxLCandlePeriod": "900",//mazaconfigok
+		  "IndicatorsMacdMazaxLSignal": "9",//mazaconfigok
+		  "IndicatorsMacdMazaxLSlowLength": "26",//mazaconfigok
+		  "IndicatorsMacdMazaxLFastLength": "12",//mazaconfigok
+			//H
+			//I OBV //
+			"IndicatorsObvMazaxLCandlePeriod": "1800",//mazaconfigok
+		  "IndicatorsObvMazaxLLength": "50",//mazaconfigok
+		  "IndicatorsObvMazaxLSignal": "1",//mazaconfigok
+
+		  //-------------------------------------------------------------------------------------------------------------------------------------------------
+		  // BASIC STRAT INDICATORS
+		  //-------------------------------------------------------------------------------------------------------------------------------------------------
+			//A -LOWBB 4 HEURES-
+			"Indicators4hLowbbCandlePeriod": "14400", //mazaconfigok
+			"Indicators4hLowbbLength": "100",//mazaconfigok
+			"Indicators4hLowbbStd": "2",//mazaconfigok
+
+			//B Emadouze Maza - EMAGAIN 12 HEURES-
+			"IndicatorsEmadouzeMazaCandlePeriod": "43200",//mazaconfigok
+			"IndicatorsEmadouzeMazaFastLength": "3",//mazaconfigok
+			"IndicatorsEmadouzeMazaSlowLength": "24",//mazaconfigok
+
+			//C EMACROSS
+			"IndicatorsEmaCrossMazaCandlePeriod": "3600",//mazaconfigok
+			"IndicatorsEmaCrossMazaCrossCandles": "15",//mazaconfigok
+			"IndicatorsEmaCrossMazaFastLength": "3",//mazaconfigok
+			"IndicatorsEmaCrossMazaSlowLength": "24",//mazaconfigok
+			"IndicatorsEmaCrossMazaLength": "10",//mazaconfigok
+
+
+			//D RSI Maza
+		  "IndicatorsRsiMazaCandlePeriod": "3600",//mazaconfigok
+		  "IndicatorsRsiMazaLength": "14",//mazaconfigok
+
+		  //E STOCH
+		  "IndicatorsStochMazaCandlePeriod": "3600",//mazaconfigok
+		  "IndicatorsStochMazaD": "3",//mazaconfigok
+		  "IndicatorsStochMazaK": "3",//mazaconfigok
+		  "IndicatorsStochMazaLength": "14",//mazaconfigok
+
+			//F SMA SPREAD
+			"IndicatorsSmaspreadMazaCandlePeriod": "14400",//mazaconfigok
+			"IndicatorsSmaspreadMazaFastLength": "12",//mazaconfigok
+			"IndicatorsSmaspreadMazaSlowLength": "26",//mazaconfigok
+
+			//G MACD //
+			"IndicatorsMacdMazaCandlePeriod": "900",//mazaconfigok
+			"IndicatorsMacdMazaSignal": "9",//mazaconfigok
+			"IndicatorsMacdMazaSlowLength": "26",//mazaconfigok
+			"IndicatorsMacdMazaFastLength": "12",//mazaconfigok
+
+			//H STOCHRSID
+			"IndicatorsStochrsidMazaCandlePeriod": "3600",//mazaconfigok
+			"IndicatorsStochrsidMazaRsiLength": "2",//mazaconfigok
+			"IndicatorsStochrsidMazaStochLength": "5",//mazaconfigok
+			"IndicatorsStochrsidMazaK": "3",//mazaconfigok
+			"IndicatorsStochrsidMazaD": "3",//mazaconfigok
+
+			//I  OBV
+			"IndicatorsObvMazaCandlePeriod": "1800",//mazaconfigok
+			"IndicatorsObvMazaLength": "50",//mazaconfigok
+			"IndicatorsObvMazaSignal": "1",//mazaconfigok
+
+     //SELL BASIC STRAT//
+
+			//B HIGHBB4H
+			"Indicators4hHighbbCandlePeriod": "14400",//mazaconfigok
+			"Indicators4hHighbbLength": "20",//mazaconfigok
+			"Indicators4hHighbbStd": "2",//mazaconfigok
+
+
+
+
+
+
+		//-------------------------------------------------------------------------------------------------------------------------------------------------
+		// BUY  STRATS NORMAL
+		//-------------------------------------------------------------------------------------------------------------------------------------------------
+
+		"ABuyStrategyLabel": "4h_Lowbb",
+		"ABuyStrategy": "LOWBB",
+		"ABuyValue": "20",
+		"ABuyValueLimit": "5",
+
+		"BBuyStrategyLabel": "Emadouze_Maza",
+		"BBuyStrategy": "EMAGAIN",
+		"BBuyValue": "-0.2",
+		//"BBuyValueLimit": "1",
+
+		"CBuyStrategyLabel": "Ema_Cross_Maza",
+		"CBuyStrategy": "EMACROSS",
+		"CBuyValue": "-0.5",
+		"CBuyValueLimit": "-5",
+
+		"DBuyStrategyLabel": "RSI_Maza",
+		"DBuyStrategy": "RSI",
+		"DBuyValue": "50",
+		"DBuyValueLimit": "27.9",
+
+		"EBuyStrategyLabel": "STOCH_Maza",
+		"EBuyStrategy": "STOCH",
+		"EBuyValue": "45",
+		"EBuyValueLimit": "20",
+
+		"FBuyStrategyLabel": "Smaspread_Maza",
+		"FBuyStrategy": "SMASPREAD",
+		"FBuyValue": "-1",
+
+
+		"GBuyStrategyLabel": "MACD_Maza",
+		"GBuyStrategy": "MACD",
+		"GBuyValue": "0.0000000001",
+		"GBuyValueLimit": "1",
+
+    "HBuyStrategyLabel": "Stochrsid_Maza",
+		"HBuyStrategy": "Stochrsid",
+		"HBuyValue": "20",
+		"HBuyValueLimit": "40",
+
+		"IBuyStrategyLabel": "Obv_Maza",
+		"IBuyStrategy": "OBV",
+		"IBuyValue": "-0.5",
+		"IBuyValueLimit": "-4",
+
+
+
+		"JBuyStrategy": "DISABLED",
+
+		//-------------------------------------------------------------------------------------------------------------------------------------------------
+		// DCA BUY  STRATS NORMAL
+		//------------------------------------------------------------------------------------------------
+		"DcaMinBuyVolume": "1",
+		"DcaMaxBuyTimes": "5",
+
+		"DcaSellWallOrderbookDepth": "100",
+		"DcaSellWallDiffPercentage": "5000",
+
+		"DcaMaxBuySpread": "3",
+		"DcaEnabled": "-1.0",
+		"DcaMaxProfit": "0",
+		"DcaMinOrderbookVolumePercentage": "120",
+		"DcaBuyMinChangePercentage": "0",
+		"DcaBuyMaxChangePercentage": "0",
+		//
+		"DcaABuyStrategy": "LOWBB",
+		"DcaABuyStrategyLabel": "4h_Lowbb",
+		"DcaABuyValue": "20",
+
+		"DcaBBuyStrategy": "EMAGAIN",
+		"DcaBBuyStrategyLabel": "Emadouze_Maza",
+		"DcaBBuyValue": "-0.2",
+
+
+		"DcaDBuyStrategyLabel": "RSI_Maza",
+		"DcaDBuyStrategy": "RSI",
+		"DcaDBuyValue": "50",
+		"DcaDBuyValueLimit": "27.9",
+
+		"DcaGBuyStrategy": "MACD",
+		"DcaGBuyStrategyLabel": "MACD_Maza_S",
+		"DcaGBuyValue": "0.0000000001",
+		"DcaGBuyValueLimit": "1",
+
+		 "DcaBuyStrategyFormula":"(B && G && D)||(D && B && A)",
+
+
+
+
+
+		"DcaHBuyStrategy": "DISABLED",
+		"DcaIBuyStrategy": "DISABLED",
+		"DcaJBuyStrategy": "DISABLED",
+		"DcaBuyTrigger": "2.2",
+		"DcaBuyTrigger1": "-1.5",
+		"DcaBuyTrigger2": "-1.75",
+		"DcaBuyTrigger3": "-2",
+		"DcaBuyTrigger4": "-2.5",
+		"DcaBuyTrigger5": "-3",
+		//
+		"DcaBuyPercentage": "100",
+		"DcaBuyPercentage1": "200", // (Start balance 10 ETH) => (1pair=5DCA levels), (2pair=3DCA levels), (5pair=2DCA levels)
+		"DcaBuyPercentage2": "100",
+		"DcaBuyPercentage3": "100",
+		"DcaBuyPercentage4": "50",
+		"DcaBuyPercentage5": "50",
+
+		//-------------------------------------------------------------------------------------------------------------------------------------------------
+		// GESTION DES ACHATS
+		//------------------------------------------------------------------------------------------------
+		"SellOnlyModeEnabled": "False",//sellonlyode
+
+		//"InitialCost": "",	// ATTENTION, certains réglage utilise le "Percentage Offset"
+		"InitialCostPercentage": "1",
+		"MinBuyVolume": "550",
+		//
+
+		"MaxBuySpread": "3",
+		"MaxProfit": "0",
+		"MinBuyPrice": "0.00000600",
+		"MinOrderbookVolumePercentage": "120",
+
+		"BuyMinChangePercentage": "0",
+		"BuyMaxChangePercentage": "0",
+		"SellWallOrderbookDepth": "100",//WTF
+		"SellWallDiffPercentage": "5000",//WTF
+
+
+		//-------------------------------------------------------------------------------------------------------------------------------------------------
+		//  SELL STRATEGY
+		//------------------------------------------------------------------------------------------------
+		"PanicSellEnabled":"false",//Justincase
+		"DcaIgnoreSellOnlyMode": "False",
+
+		"ASellStrategy": "GAIN",
+		"ASellValue": "2",
+
+		"BSellStrategy": "HIGHBB",
+		"BSellStrategyLabel": "4h_Highbb",
+		"BSellValue": "0",
+		"BSellValueLimit": "74",
+
+
+		"CSellStrategy": "STOCHRSID",
+		"CSellStrategyLabel": "Stochrsid_Maza",
+		"CSellValue": "80",
+
+
+		"DSellStrategy": "OBV",
+		"DSellStrategyLabel": "Obv_Maza",
+		"DSellValue": "-0.01",
+
+    "SellStrategyFormula":"(A && B && C)",
+
+		"ESellStrategy": "DISABLED",
+
+		"TrailingProfitType": "GROW",
+
+		//"TrailingProfitType":"DEFAULT",
+		"TrailingProfitReboundCount": "0",
+		"TrailingProfit": "0.25",
+		"RebuyTimeout": "240",
+
+		//"StopLossTrigger": "-8",
+		//"StopLossTimeout": "1440",
+		//"TakeProfitPercentage": "0",
+		//"TakeProfitResetPercentageMove": "0",
+		//"TakeProfitWaitTime": "0",
+		//"TakeProfitSafetyArm": "1.2",// => "DynamicGainSizeGrouping"
+		//"TakeProfitSafetyFire": "0.8",// 0.8% profit Safety	// => "DynamicGainSizeGrouping"
+
+		"TrailingStopLossTriggerArm": "1.3",
+		"TrailingStopLossTrigger": "-0.5", 			// 0.8%
+		//"CombinePendingOrders": "true",
+		//"PendingOrderWaitTime":"240",
+		//"PendingOrderPriceDropTrigger":"-4",
+		//"CancelPendingTrigger": "0.1",
+		//"CombinedCancelPendingTrigger":"0.1",
+		//"PendingGainPercentage": "0.5",
+
+		//-------------------------------------------------------------------------------------------------------------------------------------------------
+		// DCA  SELL  STRATS
+		//-------------------------------------------------------------------------------------------------------------------------------------------------
+
+		"DcaASellStrategy": "GAIN",
+		"DcaASellValue": "1.9",
+		"DcaASellValue1": "1.95",
+		"DcaASellValue2": "1.9",
+		"DcaASellValue3": "1.8",
+		"DcaASellValue4": "1.75",
+		"DcaASellValue5": "1.7",
+
+		//"DcaBSellStrategy": "EMACROSS",
+		//"DcaBSellStrategyLabel": "Ema_Cross_Maza_S",
+		//"DcaBSellValue": "0.01",
+
+
+		"DcaCSellStrategy": "DISABLED",
+
+		"DcaESellStrategy": "DISABLED",
+		"DcaTrailingProfitType": "GROW",
+		//"DcaTrailingProfitType":"DEFAULT",
+		"DcaTrailingProfitReboundCount": "0",
+		"DcaTrailingProfit": "0.25",
+		"DcaRebuyTimeout": "240",
+		"DcaStopLossTrigger": "-8",
+		"DcaStopLossTimeout": "1440",
+		"DcaStopBeforeComplete": "false",
+
+		//"DcaTakeProfitPercentage": "0",
+		//"DcaTakeProfitResetPercentageMove": "0",
+		//"DcaTakeProfitWaitTime": "0",
+		//"DcaTakeProfitSafetyArm": "1.2",// => "DynamicGainSizeGrouping"
+		//"DcaTakeProfitSafetyFire": "0.8",// 0.8% profit Safety	// => "DynamicGainSizeGrouping"
+
+		"DcaTrailingStopLossTriggerArm": "1.3",
+		"DcaTrailingStopLossTrigger": "-0.5", 		// 0.8%
+
+		//"DcaCombinePendingOrders": "true",
+		//"DcaPendingOrderWaitTime":"240",
+		//"DcaPendingOrderPriceDropTrigger":"-4",
+		//"DcaCancelPendingTrigger": "0.1",
+		//"DcaCombinedCancelPendingTrigger":"0.1",
+		//"DcaPendingGainPercentage": "0.5",
+
+	},
+	//-------------------------------------------------------------------------------------------------------------------------------------------------
+	// CONDITIONS DE MARCHE
+	//-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	"MarketConditionsGrouping": {
+		"Configs": [
+			{
+				"Name": "1/5 SUPEROURS",
+				"MaxTopCoinAverageChange": "-2.5",
+				"MaxTopCoinLongTermAverageChange": "-2.5",
+
+				"Override": {
+					"InsertSnippets": "1/5 SUPEROURS",
+					"Weight": "85"
+				}
+			},
+			{
+				"Name": "2/5 OURS",
+				"MaxTopCoinAverageChange": "-2",
+				"MaxTopCoinLongTermAverageChange": "-1.75",
+
+				"Override": {
+					"InsertSnippets": "2/5 OURS",
+					"Weight": "86"
+				}
+			},
+			{
+				"Name": "3/5 NORMAL",
+				"MaxTopCoinAverageChange": "1",
+				"MaxTopCoinLongTermAverageChange": "2",
+				"Override": {
+					"InsertSnippets": "3/5 NORMAL",
+					"Weight": "87"
+				}
+			},
+			{
+				"Name": "4/5 TAUREAU",
+				"MaxTopCoinAverageChange": "5",
+				"MaxTopCoinLongTermAverageChange": "3.5",
+				"Override": {
+					"InsertSnippets": "4/5 TAUREAU",
+					"Weight": "88"
+				}
+			},
+			{
+				"Name": "5/5 SUPERTAUREAU",
+				"MaxTopCoinAverageChange": "10000",
+				"MaxTopCoinLongTermAverageChange": "10000",
+				"Override": {
+					"InsertSnippets": "5/5 SUPERTAUREAU",
+					"Weight": "89"
+				}
+			}
+		]
+	},
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // C A N D L E  S I Z E
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  "AverageCandleSizeGrouping": {
+    "Configs": [
+      {
+				"MaxPercentageSizeOfPrice": "0.02",
+				"ASellValueOffset": "-50", 		// gain
+        "DcaASellValueOffset": "-50",	// gain
+				"Override": {
+					"SellOnlyModeEnabled": "true",
+					}
+      }
+    ]
+  },
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // V O L A T I L I T Y
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  "DownsideVolatilityGrouping": {
+    "Configs": [
+      {
+        "MaxChangeFromOpen": "1.5"
+      },
+     {
+				"MaxChangeFromOpen": "1000",
+				"ASellValueOffset": "-50", 			// gain
+				"DcaASellValueOffset": "-50", 	// gain
+				"Override": {
+				"SellOnlyModeEnabled": "true",
+
+				}
+      }
+    ]
+	},
+	"DcaExposureGrouping": {
+    "Condition": "[positions.DcaCoinCount] >= [config.TriggerValue]",
+    "Configs": [
+					{
+					"TriggerValue": "8",
+					"Override": {
+					"SellOnlyModeEnabled": "true",
+					"DcaIgnoreSellOnlyMode": "true",
+					"Weight": "200"
+				}
+			}
+		]
+	},
+
+  "DcaSqueezeGrouping": {
+    "Condition": "[pair.PercentageChange(4)] <= [config.PercentageChange]",
+    "Configs": [
+      {
+        "PercentageChange": "-4",
+        "Override": {
+					"InsertSnippets": "1/5 SUPEROURS",
+					"Weight": "201"
+        }
+      },
+      {
+        "PercentageChange": "-2",
+        "Override": {
+					"InsertSnippets": "2/5 OURS",
+					"Weight": "202"
+        }
+      },
+      {
+        "PercentageChange": "0",
+        "Override": {
+					"InsertSnippets": "3/5 NORMAL",
+					"Weight": "203"
+        }
+      },
+      {
+        "PercentageChange": "2",
+        "Override": {
+					"InsertSnippets": "4/5 TAUREAU",
+					"Weight": "204"
+        }
+      },
+      {
+        "PercentageChange": "4",
+        "Override": {
+					"InsertSnippets": "5/5 SUPERTAUREAU",
+					"Weight": "205"
+        }
+      }
+   ]
+  },
+
+	"IncreasedPairsExposurePositionGrouping": {
+		"Condition": "(([positions.TotalPairsCurrentValue] - [positions.TotalPairsBoughtCost]) / [positions.TotalPairsBoughtCost]) * 100 < [config.MaxPosition]",
+		"Configs": [
+			{
+				"MaxPosition": "-6",
+				"InitialCostPercentageOffset": "-35",
+				"ASellValueOffset": "-25",
+				"DcaASellValueOffset": "-25",
+				"Weight": "301"
+			},
+			{
+				"MaxPosition": "-3",
+				"InitialCostPercentageOffset": "-15",
+				"ASellValueOffset": "-10",
+				"DcaASellValueOffset": "-10",
+				"Weight": "302"
+			},
+			{
+				"MaxPosition": "-2",
+				"InitialCostPercentageOffset": "-10",
+				"ASellValueOffset": "-5",
+				"DcaASellValueOffset": "-5",
+				"Weight": "303"
+			}
+		]
+	},
+	"IncreasedDcaExposurePositionGrouping": {
+		"Condition": "(([positions.TotalDcaCurrentValue] - [positions.TotalDcaBoughtCost]) / [positions.TotalDcaBoughtCost]) * 100 < [config.MaxPosition]",
+		"Configs": [
+			{
+				"MaxPosition": "-6",
+				"InitialCostPercentageOffset": "-35",
+				"ASellValueOffset": "-25",
+				"DcaASellValueOffset": "-25",
+				"Weight": "304"
+			},
+			{
+				"MaxPosition": "-3",
+				"InitialCostPercentageOffset": "-15",
+				"ASellValueOffset": "-10",
+				"DcaASellValueOffset": "-10",
+				"KeepBalancePercentageOffset": "10",
+				"Weight": "305"
+			},
+			{
+				"MaxPosition": "-2",
+				"InitialCostPercentageOffset": "-10",
+				"ASellValueOffset": "-5",
+				"DcaASellValueOffset": "-5",
+				"KeepBalancePercentageOffset": "15",
+				"Weight": "306"
+			}
+		]
+	},
+	"DynamicGainSizeGrouping": {
+		"Condition": "[pair.Profit] >= [config.TargetProfit]",
+		"Configs": [
+			{ // TargetProfit "7.5"
+				"TargetProfit": "7.5",
+				"Override": {
+					//Pairs
+					"ASellStrategy": "GAIN",
+					"ASellValue": "10",
+					"TakeProfitSafetyArm": "7.5",
+					"TakeProfitSafetyFire": "5.5", 					// 5.5% profit Safety
+					"TrailingStopLossTriggerArm": "8",
+					"TrailingStopLossTrigger": "-3.5", 			// 4.5%
+					//DCA
+					"DcaASellStrategy": "GAIN",
+					"DcaASellValue": "10",
+					"DcaTakeProfitSafetyArm": "7.5",
+					"DcaTakeProfitSafetyFire": "5.5", 			// 5.5% profit Safety
+					"DcaStopBeforeComplete": "true", 				// Force enable trailing SL with Anti-DCA
+					"DcaTrailingStopLossTriggerArm": "8",
+					"DcaTrailingStopLossTrigger": "-3.5", 	// 4.5%
+					"Weight": "307"
+				}
+			},
+			{ // TargetProfit "4.5"
+				"TargetProfit": "4.5",
+				"Override": {
+					//Pairs
+					"ASellStrategy": "GAIN",
+					"ASellValue": "7",
+					"TakeProfitSafetyArm": "4.5",
+					"TakeProfitSafetyFire": "2.5", 					// 2.5% profit Safety
+					"TrailingStopLossTriggerArm": "5",
+					"TrailingStopLossTrigger": "-1.8", 			// 3.2%
+					//DCA
+					"DcaASellStrategy": "GAIN",
+					"DcaASellValue": "7",
+					"DcaTakeProfitSafetyArm": "4.5",
+					"DcaTakeProfitSafetyFire": "2.5", 			// 2.5% profit Safety
+					"DcaStopBeforeComplete": "true", 				// Force enable trailing SL with Anti-DCA
+					"DcaTrailingStopLossTriggerArm": "5",
+					"DcaTrailingStopLossTrigger": "-1.8", 	// 3.2%
+					"Weight": "308"
+				}
+			},
+			{ // TargetProfit "2.5"
+				"TargetProfit": "2.5",
+				"Override": {
+					//Pairs
+					"ASellStrategy": "GAIN",
+					"ASellValue": "5",
+					"TakeProfitSafetyArm": "2.5",
+					"TakeProfitSafetyFire": "1", 						// 1% profit Safety
+					"TrailingStopLossTriggerArm": "3",
+					"TrailingStopLossTrigger": "-1.5", 			// 1.5%
+					//DCA
+					"DcaASellStrategy": "GAIN",
+					"DcaASellValue": "5",
+					"DcaTakeProfitSafetyArm": "2.5",
+					"DcaTakeProfitSafetyFire": "1", 				// 1% profit Safety
+					"DcaStopBeforeComplete": "true", 				// Force enable trailing SL with Anti-DCA
+					"DcaTrailingStopLossTriggerArm": "3",
+					"DcaTrailingStopLossTrigger": "-1.5", 	// 1.5%
+					"Weight": "309"
+				}
+			}
+		]
+	},
+	//Va dans les groupes (conditions ou autres)
+
+	"Snippets": [
+	  {
+	      "SnippetName": "1/5 SUPEROURS",
+				"ABuyStrategyLabel": "4h_Lowbb",
+				"BBuyStrategyLabel": "Emadouze_Maza",
+				"CBuyStrategyLabel": "Ema_Cross_Maza_Xs",
+				"DBuyStrategyLabel": "RSI_Maza_Xs",
+				"HBuyStrategyLabel": "Stochrsid_Maza_S",
+				"GBuyStrategyLabel": "MACD_Maza_S",
+				"IBuyStrategyLabel": "Obv_Maza_S",
+				"FBuyStrategyLabel": "Smaspread_Maza",
+
+       "BuyStrategyFormula":"(B && G && D)|| (H && G && A) || (H && B && A) || (H && G && A) || (D && G && A) || (D && B && A) || (G && B && A)",
+
+	      // General Pairs
+	      "MaxTradingPairs": "4",
+	      "OrderbookProfitCalculation": "true",
+	      "MaxBuySpread": "2",
+	      "TrailingBuyReboundCount": "0",
+	      "RebuyTimeout": "1440",
+	      "TrailingBuy": "0",
+	      "TrailingProfitReboundCount": "1",
+	      "TrailingProfitType": "GROW",
+	      "TrailingProfit": "0.25",
+	      //---------------------------------
+	      //---------------------------------
+	      // General DCA
+	      "DcaOrderbookProfitCalculation": "true",
+	      "DcaMinBuyVolume": "1",
+	      "DcaMaxBuyTimes": "5",
+	      "DcaMaxBuySpread": "2",
+	      "DcaRebuyTimeout": "1440",
+	      "DcaTrailingBuy": "1.0",
+	      "DcaTrailingBuyReboundCount": "1",
+	      "DcaBuyTrigger": "-5",
+	      "DcaBuyPercentage": "100",
+	      "DcaTrailingProfitReboundCount": "0",
+	      "DcaTrailingProfitType": "GROW",
+	      "DcaTrailingProfit": "0.25",
+
+
+
+	      //---------------------------------
+	      // Pairs => Buy
+
+
+	      // Pairs => Sell
+	      "ASellStrategy": "GAIN",
+	      "ASellValue": "1",
+
+	      "BSellStrategyLabel": "CONNORSMACD",
+	      "BSellStrategy": "MACD",
+	      "BSellValue": "-0.000000001",
+	      "BSellValueLimit": "-1",
+
+	      "CSellStrategyLabel": "CONNORSRSI",
+	      "CSellStrategy": "RSI",
+	      "CSellValue": "69.9",
+	      "CSellValueLimit": "100.1",
+
+
+
+
+	      "Weight": "901"
+	  },
+	  {
+	      "SnippetName": "2/5 OURS",
+
+
+
+				"ABuyStrategyLabel": "4h_Lowbb",
+				"BBuyStrategyLabel": "Emadouze_Maza",
+				"CBuyStrategyLabel": "Ema_Cross_Maza_S",
+				"DBuyStrategyLabel": "RSI_Maza_S",
+				"GBuyStrategyLabel": "MACD_Maza_S",
+				"HBuyStrategyLabel": "Stochrsid_Maza_S",
+				"IBuyStrategyLabel": "Obv_Maza_S",
+				"FBuyStrategyLabel": "Smaspread_Maza",
+
+"BuyStrategyFormula":"(B && G && D)|| (H && G && A) || (H && B && A) || (H && G && A) || (D && G && A) || (D && B && A) || (G && B && A)",
+
+	      "DcaEnabled": "-3",
+	      "DcaMaxBuyTimes": "5",
+	      "MaxBuySpread": "1.75",
+	      "DcaMaxBuySpread": "1.75",
+	      "TrailingBuy": "0.7",
+	      "DcaTrailingBuy": "0.7",
+	      //Pairs => Buy
+
+
+
+
+
+	      "JBuyStrategy": "DISABLED",
+	      // Pairs => Sell
+
+	      "ASellStrategy": "GAIN",
+	      "BSellStrategy": "HIGHBB",
+
+
+
+	      // DCA => Buy
+
+	      "DcaBuyTrigger": "-4",
+	      "DcaBuyTrigger1": "-3",
+	      "DcaBuyTrigger2": "-2",
+	      "DcaBuyTrigger3": "-5",
+	      "DcaBuyTrigger4": "-4",
+	      "DcaBuyTrigger5": "-3",
+	      "DcaBuyPercentage": "100",
+	      "DcaBuyPercentage1": "100",	// (Start balance 10 ETH) => (1pair=4DCA levels), (2pair=3DCA levels), (5pair=2DCA levels)
+	      "DcaBuyPercentage2": "100",
+	      "DcaBuyPercentage3": "100",
+	      "DcaBuyPercentage4": "100",
+	      "DcaBuyPercentage5": "50",
+	      // DCA => Sell
+	      "DcaASellStrategy": "GAIN",
+	      "DcaASellValue": "1.15",
+
+
+
+
+	      "DcaESellStrategy": "DISABLED",
+
+	      "Weight": "902"
+	  },
+	  {
+	      "SnippetName": "3/5 NORMAL",
+
+
+				"ABuyStrategyLabel": "4h_Lowbb",
+				"BBuyStrategyLabel": "Emadouze_Maza",
+				"CBuyStrategyLabel": "Ema_Cross_Maza_M",
+				"DBuyStrategyLabel": "RSI_Maza_M",
+
+				"EBuyStrategyLabel": "STOCH_Maza_M",
+				"HBuyStrategyLabel": "Stochrsid_Maza_S",
+				"GBuyStrategyLabel": "MACD_Maza_M",
+				"FBuyStrategyLabel": "Smaspread_Maza",
+
+	      "DcaEnabled": "-1",
+	      "DcaIgnoreSellOnlyMode": "true",
+	      "DcaMaxBuyTimes": "10",
+	      "MaxBuySpread": "3",
+	      "DcaMaxBuySpread": "3",
+	      // Pairs => Buy
+
+
+
+
+
+	      "JBuyStrategy": "DISABLED",
+	      //Pairs => Sell
+	      "ASellStrategy": "GAIN",
+	      "ASellValue": "1.15",
+
+	      "ESellStrategy": "DISABLED",
+	      // DCA => Buy
+
+
+	      "DcaFBuyStrategy": "DISABLED",
+
+	      "DcaHBuyStrategy": "DISABLED",
+	      "DcaIBuyStrategy": "DISABLED",
+	      "DcaJBuyStrategy": "DISABLED",
+	      "DcaBuyTrigger": "1.4",
+	      "DcaBuyTrigger1": "-1",
+	      "DcaBuyTrigger2": "-3.5",
+	      "DcaBuyTrigger3": "-4.75",
+	      "DcaBuyTrigger4": "-5.5",
+	      "DcaBuyTrigger5": "-6.5",
+	      "DcaBuyTrigger6": "-2.5",
+	      "DcaBuyTrigger7": "-2.5",
+	      "DcaBuyTrigger8": "-2.5",
+	      "DcaBuyTrigger9": "-2.5",
+	      "DcaBuyTrigger10": "-2.5",
+	      "DcaBuyPercentage": "100",
+	      "DcaBuyPercentage1": "100",	// (Start balance 10 ETH) => (1pair=4DCA levels), (2pair=3DCA levels), (5pair=2DCA levels)
+	      "DcaBuyPercentage2": "100",
+	      "DcaBuyPercentage3": "100",
+	      "DcaBuyPercentage4": "100",
+	      "DcaBuyPercentage5": "50",
+	      "DcaBuyPercentage6": "25",
+	      "DcaBuyPercentage7": "20",
+	      "DcaBuyPercentage8": "15",
+	      "DcaBuyPercentage9": "100",
+	      "DcaBuyPercentage10": "10",
+	      // DCA => Sell
+	      "DcaASellStrategy": "GAIN",
+	      "DcaASellValue": "1.25",
+
+
+
+	      "DcaESellStrategy": "DISABLED",
+
+	      "Weight": "903"
+	  },
+	  {
+	      "SnippetName": "4/5 TAUREAU",
+
+
+				"ABuyStrategyLabel": "4h_Lowbb",
+
+				"BBuyStrategyLabel": "Emadouze_Maza",
+
+				"CBuyStrategyLabel": "Ema_Cross_Maza_L",
+
+				"DBuyStrategyLabel": "RSI_Maza_L",
+
+				"EBuyStrategyLabel": "STOCH_Maza_L",
+				"HBuyStrategyLabel": "Stochrsid_Maza_S",
+				"IBuyStrategyLabel": "Obv_Maza_L",
+				"FBuyStrategyLabel": "Smaspread_Maza",
+
+"BuyStrategyFormula":"(B && G && D)|| (H && G && A) || (H && B && A) || (H && G && A) || (D && G && A) || (D && B && A) || (G && B && A)",
+
+	      "DcaEnabled": "-1.5",
+	      "DcaIgnoreSellOnlyMode": "true",
+	      "DcaMaxBuyTimes": "10",
+	      "MaxBuySpread": "2.5",
+	      "DcaMaxBuySpread": "2.5",
+	      // Pairs => Buy
+
+
+
+
+
+	      "JBuyStrategy": "DISABLED",
+	      //Pairs => Sell
+	      "ASellStrategy": "GAIN",
+	      "ASellValue": "1.55",
+
+
+
+	      "ESellStrategy": "DISABLED",
+	      // DCA => Buy
+
+
+	      "DcaFBuyStrategy": "DISABLED",
+
+
+	      "DcaHBuyStrategy": "DISABLED",
+	      "DcaIBuyStrategy": "DISABLED",
+	      "DcaJBuyStrategy": "DISABLED",
+	      "DcaBuyTrigger": "1.8",
+	      "DcaBuyTrigger1": "-1.6",
+	      "DcaBuyTrigger2": "-2.6",
+	      "DcaBuyTrigger3": "-3.75",
+	      "DcaBuyTrigger4": "-4.5",
+	      "DcaBuyTrigger5": "-5.5",
+	      "DcaBuyTrigger6": "-1.5",
+	      "DcaBuyTrigger7": "-4.5",
+	      "DcaBuyTrigger8": "-3.5",
+	      "DcaBuyTrigger9": "-2.5",
+	      "DcaBuyTrigger10": "-1.5",
+	      "DcaBuyPercentage": "100",
+	      "DcaBuyPercentage1": "100",	// (Start balance 10 ETH) => (1pair=4DCA levels), (2pair=3DCA levels), (5pair=2DCA levels)
+	      "DcaBuyPercentage2": "100",
+	      "DcaBuyPercentage3": "100",
+	      "DcaBuyPercentage4": "100",
+	      "DcaBuyPercentage5": "50",
+	      "DcaBuyPercentage6": "25",
+	      "DcaBuyPercentage7": "20",
+	      "DcaBuyPercentage8": "15",
+	      "DcaBuyPercentage9": "100",
+	      "DcaBuyPercentage10": "10",
+	      // DCA => Sell
+	      "DcaASellStrategy": "GAIN",
+	      "DcaASellValue": "1.25",
+
+
+
+	      "DcaESellStrategy": "DISABLED",
+
+	      "Weight": "904"
+	  },
+	  {
+	      "SnippetName": "5/5 SUPERTAUREAU",
+
+
+				"ABuyStrategyLabel": "4h_Lowbb",
+
+				"BBuyStrategyLabel": "Emadouze_Maza",
+
+				"CBuyStrategyLabel": "Ema_Cross_Maza_xL",
+
+				"DBuyStrategyLabel": "RSI_Maza_xL",
+
+				"EBuyStrategyLabel": "STOCH_Maza_xL",
+
+				"HBuyStrategyLabel": "Stochrsid_Maza_S",
+				"IBuyStrategyLabel": "Obv_Maza_L",
+				"FBuyStrategyLabel": "Smaspread_Maza",
+
+
+
+"BuyStrategyFormula":"(B && G && D)|| (H && G && A) || (H && B && A) || (H && G && A) || (D && G && A) || (D && B && A) || (G && B && A)",
+
+	      "DcaEnabled": "-1.5",
+	      "DcaIgnoreSellOnlyMode": "true",
+	      "DcaMaxBuyTimes": "10",
+	      "MaxBuySpread": "2",
+	      "DcaMaxBuySpread": "2",
+	      // Prairs => Buy
+
+
+
+
+
+	      "JBuyStrategy": "DISABLED",
+	      // Prairs => Sell
+
+
+
+	      "ESellStrategy": "DISABLED",
+	      // DCA => Buy
+
+
+	      "DcaJBuyStrategy": "DISABLED",
+	      "DcaBuyTrigger": "2.3",
+	      "DcaBuyTrigger1": "-1.6",
+	      "DcaBuyTrigger2": "-2.6",
+	      "DcaBuyTrigger3": "-3.75",
+	      "DcaBuyTrigger4": "-4.5",
+	      "DcaBuyTrigger5": "-5.5",
+	      "DcaBuyTrigger6": "-1.5",
+	      "DcaBuyTrigger7": "-4.5",
+	      "DcaBuyTrigger8": "-3.5",
+	      "DcaBuyTrigger9": "-2.5",
+	      "DcaBuyTrigger10": "-1.5",
+	      "DcaBuyPercentage": "100",
+	      "DcaBuyPercentage1": "100",		// (Start balance 10 ETH) => (1pair=4DCA levels), (2pair=3DCA levels), (5pair=2DCA levels)
+	      "DcaBuyPercentage2": "100",
+	      "DcaBuyPercentage3": "100",
+	      "DcaBuyPercentage4": "100",
+	      "DcaBuyPercentage5": "50",
+	      "DcaBuyPercentage6": "25",
+	      "DcaBuyPercentage7": "20",
+	      "DcaBuyPercentage8": "15",
+	      "DcaBuyPercentage9": "100",
+	      "DcaBuyPercentage10": "10",
+	      // DCA => Sell
+	      "DcaASellStrategy": "GAIN",
+	      "DcaASellValue": "2.1",
+
+
+	      "Weight": "905"
+	  },
+
+
+	"DeadCoinSafetyGrouping": {
+    "Condition": "[pair.PercentageChange(3)] <= [config.PriceDrop4hour]",
+    "Configs": [
+      {
+        "PriceDrop4hour": "-10",
+        "Override": {
+          "SellOnlyModeEnabled": "true",
+          "Weight": "997"
+        }
+      }
+    ]
+	},
+	"NewCoinsGrouping": {
+		"Configs": [
+			{
+				"CoinAge": "200",
+				"TimeUnit": "Days",
+				"Override": {
+					"SellOnlyModeEnabled": "true",
+					"Weight": "998"
+				}
+			}
+		]
+	},
+	"PanicSellGrouping": {
+		"Condition": "[market.BaseCoinPriceChange(3)] < [config.BtcPriceDrop4hour] && [market.BaseCoinPriceChange(1)] >= [config.BtcPricePump11800in]",
+		"Configs": [
+			{
+				"MaxTopCoinAverageChange": "-3",
+				"BtcPriceDrop4hour": "-4",
+				"BtcPricePump11800in": "7",
+				"SellOnlyModeEnabled": "true",
+				"DcaIgnoreSellOnlyMode" : "False",
+				"PanicSellEnabled": "true",
+				"DcaPanicSellEnabled": "true",
+				"StickyTimer": "1440",
+				"Weight": "999"
+			}
+		]
+	},
+	"ExchangeGrouping": {
+		"Configs": [
+			{
+				"ExchangeName": "Bittrex",
+				// [Volume Binance "550"] - [Offset "-72"] = Volume Bittrex 154
+				"MinBuyVolumeOffset": "-72",
+			}
+		]
+	},
+
+
+	"PriceTrendChangeGrouping": {
+	  "Configs": [
+	    {
+	      //-INFto-TEN
+	      "MaxPriceTrendPercentageChange": "-10"
+	    },
+	    {
+	      //-TENto-FIVE
+	      "MaxPriceTrendPercentageChange": "-5",
+
+	      //DCA
+
+	    },
+	    {
+	      //-FIVEtoSEVEN
+	      "MaxPriceTrendPercentageChange": "7"
+	    },
+	    {
+	      //SEVENtoINF
+	      "MaxPriceTrendPercentageChange": "1000000",
+
+	    }
+	  ]
+	},
+//PENSER A INDIQUER LE STRATEGY LABEL POUR AVOIR L INDICATEUR
+	"LongerTermPriceTrendChangeGrouping": {
+	  "Configs": [
+	    {
+	      "MaxPriceTrendPercentageChange": "-3",
+	      "Override": {
+	        "InsertSnippets": "1/7",
+					//Pairs LABEL
+					"ABuyStrategyLabel": "4h_Lowbb",
+					"BBuyStrategyLabel": "Emadouze_Maza",
+					"CBuyStrategyLabel": "Ema_Cross_Maza_Xs",
+					"DBuyStrategyLabel": "RSI_Maza_Xs",
+					"GBuyStrategyLabel": "MACD_Maza_xS",
+					"HBuyStrategyLabel": "Stochrsid_Maza_XS",
+					"HBuyStrategy": "Stochrsid",
+					"IBuyStrategyLabel": "Obv_Maza_S",
+
+					//DCA LABEL
+					"DcaDBuyStrategyLabel": "RSI_Maza_Xs",
+
+
+					"Weight": "910"
+	      },
+				//OFFSETONLY
+
+				"ABuyValueOffset":"-30",
+				"ABuyValueLimitOffset":"-200",
+				"DcaABuyValueOffset":"-30",
+				"DcaABuyValueLimitOffset":"-200",
+				"CBuyValueOffset":"-130",
+				"DBuyStrategy": "RSI",
+
+				"DBuyValueOffset":"-20",
+				"DBuyValueLimitOffset":"-20",
+				"DcaDBuyValueOffset":"-20",
+				"DcaDBuyValueLimitOffset":"-20",
+				"HBuyValueOffset":"-15",
+				"IBuyValueOffset":"-15",
+
+	    },
+	    {
+	      "MaxPriceTrendPercentageChange": "-0.4",
+	      "MaxBuySpreadOffset": "-20",
+	      "Override": {
+	        "InsertSnippets": "2/7",
+					//PAIRS
+					"ABuyStrategyLabel": "4h_Lowbb",
+					"BBuyStrategyLabel": "Emadouze_Maza",
+					"CBuyStrategyLabel": "Ema_Cross_Maza_Xs",
+					"DBuyStrategyLabel": "RSI_Maza_Xs",
+					"GBuyStrategyLabel": "MACD_Maza_S",
+					"HBuyStrategyLabel": "Stochrsid_Maza_S",
+					"IBuyStrategyLabel": "Obv_Maza_S",
+					//DCA LABEL
+					"DcaDBuyStrategyLabel": "RSI_Maza_Xs",
+
+
+					"Weight": "911",
+	      },
+
+
+				"ABuyValueOffset":"-15",
+				"ABuyValueLimitOffset":"-150",
+				"DcaABuyValueOffset":"-15",
+				"DcaABuyValueLimitOffset":"-150",
+				"CBuyValueOffset":"-120",
+				"DBuyValueOffset":"-17",
+				"DBuyValueLimitOffset":"-17",
+				"DcaDBuyValueOffset":"-17",
+				"DcaDBuyValueLimitOffset":"-17",
+				"HBuyValueOffset":"-10",
+				"IBuyValueOffset":"-12",
+	    },
+	    {
+	      "MaxPriceTrendPercentageChange": "0.7",
+	      "MaxBuySpreadOffset": "20",
+	      "Override": {
+	        "InsertSnippets": "3/7",
+					//PAIRS
+					"ABuyStrategyLabel": "4h_Lowbb",
+					"BBuyStrategyLabel": "Emadouze_Maza",
+					"CBuyStrategyLabel": "Ema_Cross_Maza_S",
+					"DBuyStrategyLabel": "RSI_Maza_S",
+					"EBuyStrategyLabel": "STOCH_Maza_S",
+					"GBuyStrategyLabel": "MACD_Maza_S",
+					"HBuyStrategyLabel": "Stochrsid_Maza_S",
+					"IBuyStrategyLabel": "Obv_Maza_S",
+					//DCA
+        "DcaDBuyStrategyLabel": "RSI_Maza_S",
+
+	        "Weight": "912"
+	      },
+
+
+				"ABuyValueOffset":"-30",
+				"ABuyValueLimitOffset":"-80",
+				"DcaABuyValueOffset":"-30",
+				"DcaABuyValueLimitOffset":"-80",
+				"CBuyValueOffset":"-50",
+		  	"DBuyValueOffset":"-15",
+				"DBuyValueLimitOffset":"-15",
+				"DcaDBuyValueOffset":"-15",
+				"DcaDBuyValueLimitOffset":"-15",
+				"EBuyValueOffset":"",
+				"HBuyValueOffset":"-9",
+				"IBuyValueOffset":"-10",
+	    },
+	    {
+	      "MaxPriceTrendPercentageChange": "1.2",
+	      "MaxBuySpreadOffset": "20",
+	      "Override": {
+	        "InsertSnippets": "4/7",
+
+
+
+	        "Weight": "913"
+	      },
+
+	    },
+	    {
+	      "MaxPriceTrendPercentageChange": "2.5",
+	      "MaxBuySpreadOffset": "20",
+	      "Override": {
+	        "InsertSnippets": "5/7",
+
+					//PAIRS
+					"ABuyStrategyLabel": "4h_Lowbb",
+					"BBuyStrategyLabel": "Emadouze_Maza",
+					"CBuyStrategyLabel": "Ema_Cross_Maza_M",
+					"DBuyStrategyLabel": "RSI_Maza_M",
+					"EBuyStrategyLabel": "STOCH_Maza_M",
+					"HBuyStrategyLabel": "Stochrsid_Maza_M",
+					"GBuyStrategyLabel": "MACD_Maza_M",
+					"IBuyStrategyLabel": "Obv_Maza_M",
+
+					//DCA
+					"DcaDBuyStrategyLabel": "RSI_Maza_M",
+
+					"Weight": "914",
+	      },
+
+
+				"ABuyValueOffset":"10",
+				"ABuyValueLimitOffset":"20",
+				"DcaABuyValueOffset":"10",
+				"DcaABuyValueLimitOffset":"20",
+				"CBuyValueOffset":"50",
+				"DBuyValueOffset":"15",
+				"DBuyValueLimitOffset":"15",
+				"DcaDBuyValueOffset":"15",
+				"DcaDBuyValueLimitOffset":"15",
+ 			  "HBuyValueOffset":"5",
+				"IBuyValueOffset":"10",
+	    },
+	    {
+	      "MaxPriceTrendPercentageChange": "5",
+	      "MaxBuySpreadOffset": "20",
+	      "Override": {
+	        "InsertSnippets": "6/7",
+					//PAIRS
+					"ABuyStrategyLabel": "4h_Lowbb",
+					"BBuyStrategyLabel": "Emadouze_Maza",
+					"CBuyStrategyLabel": "Ema_Cross_Maza_M",
+					"DBuyStrategyLabel": "RSI_Maza_M",
+					"EBuyStrategyLabel": "STOCH_Maza_M",
+					"HBuyStrategyLabel": "Stochrsid_Maza_M",
+					"GBuyStrategyLabel": "MACD_Maza_M",
+					"IBuyStrategyLabel": "Obv_Maza_M",
+					//DCA
+  			"DcaDBuyStrategyLabel": "RSI_Maza_M",
+
+					"Weight": "915"
+	      },
+
+
+				"ABuyValueOffset":"11",
+				"ABuyValueLimitOffset":"30",
+				"DcaABuyValueOffset":"11",
+				"DcaABuyValueLimitOffset":"30",
+				"CBuyValueOffset":"120",
+				"DBuyValueOffset":"17",
+				"DBuyValueLimitOffset":"17",
+				"DcaDBuyValueOffset":"17",
+				"DcaDBuyValueLimitOffset":"17",
+				"HBuyValueOffset":"6",
+				"IBuyValueOffset":"12",
+	    },
+	    {
+	      "MaxPriceTrendPercentageChange": "10000",
+	      "Override": {
+	        "InsertSnippets": "7/7",
+
+					//Pairs
+					"ABuyStrategyLabel": "4h_Lowbb",
+					"BBuyStrategyLabel": "Emadouze_Maza",
+					"CBuyStrategyLabel": "Ema_Cross_Maza_M",
+					"DBuyStrategyLabel": "RSI_Maza_M",
+					"EBuyStrategyLabel": "STOCH_Maza_M",
+					"HBuyStrategyLabel": "Stochrsid_Maza_M",
+					"GBuyStrategyLabel": "MACD_Maza_M",
+					"IBuyStrategyLabel": "Obv_Maza_M",
+					//DCA
+					"DcaDBuyStrategyLabel": "RSI_Maza_M",
+
+	        "Weight": "916"
+	      },
+
+
+				"ABuyValueOffset":"12",
+				"ABuyValueLimitOffset":"50",
+				"DcaABuyValueOffset":"12",
+				"DcaABuyValueLimitOffset":"50",
+				"CBuyValueOffset":"130",
+				"DBuyValueOffset":"20",
+				"DBuyValueLimitOffset":"20",
+				"DcaDBuyValueOffset":"20",
+				"DcaDBuyValueLimitOffset":"20",
+				"HBuyValueOffset":"8",
+				"IBuyValueOffset":"15",
+	    }
+	  ]
+	},
+
+
+
+
+	"Footer": {
+		"Pairs": {},
+		"Dca": {},
+		"Indicators": {}
+	}
+}
