@@ -1,0 +1,718 @@
+{
+  "PtFeeder": {
+    "BaseCurrency": "USDT",
+    "BaseCoinPair": "BTCUSDT",
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // P T F  L I S T S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+    "HiddenCoins": "",
+    "ExcludedCoins": "", 
+    "SomOnlyCoins": "",
+    "EnabledCoinsOnly": "BTC,ETH",
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // M E A S U R E T I M E S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+    "MeasureTimes": [
+      15, // 15min
+      60, // 1h
+      240, // 4h
+      1440 // 24h
+    ],
+
+    //Pairs
+    "MaxTrailingProfit": "0.5",
+    "MinTrailingProfit": "0.01",
+
+    "AutoTopCoinWhitelist": "true",
+    "TopCoinTrendChangeCoins": "",
+    "TopCurrenciesToCheck": "10",
+
+    //DCA
+    "DcaMaxTrailingProfit": "0.5",
+    "DcaMinTrailingProfit": "0.01",
+
+
+    //"MaxTrailingBuy": "0.5",
+    //"MinTrailingBuy": "0.01",
+    //"DcaMaxTrailingBuy": "0.5",
+    //"DcaMinTrailingBuy": "0.01",
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // P T F  I N D I C A T O R S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+    "FeederCandleSize": "5m", // 5 minute candles
+
+    "EmaShortCandleSize": "1h",
+    "EmaLongCandleSize": "1h",
+    "EmaShortPeriod": "5",
+    "EmaLongPeriod": "20",
+
+    "SmaShortCandleSize": "1d",
+    "SmaLongCandleSize": "1d",
+    "SmaShortPeriod": "5",
+    "SmaLongPeriod": "20",
+
+    "RsiLongPeriod": "20",
+    "RsiShortPeriod": "5",
+    "RsiShortCandleSize": "5m",
+    "RsiLongCandleSize": "20m",
+
+    "BaseHighLowPriceChangeCandleSize": "5m",
+    "HighestCandlesSize": "5m",
+    "LowestCandlesSize": "5m",
+    
+    "TopCoinsAverageEmaLongPeriod": "20",
+    "TopCoinsAverageEmaShortPeriod": "16"
+  },
+
+  "Common": {
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // B A L A N C E S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+
+    //Pairs
+    "KeepBalance": "70%",
+    "MaxTradingPairs": "5",
+    "PairMinListedDays": "365",
+    "OrderbookProfitCalculation": "true",
+
+    //DCA
+    "DcaKeepBalance": "0%",
+    "DcaStopBeforeComplete": "true", // Si valeur est "true" se comporte comme pour les Pairs.
+    "DcaSomDcaBuyTrigger": "-20",
+    "DcaOrderbookProfitCalculation": "true",
+
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // P T  I N D I C A T O R S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Avoir minimum un ratio de 4 entre 2 timeframe
+//avoir au minimum 4 bougies sur le timeframe suppérieur
+// 15min 1h 4h
+
+  // ---------------------
+  // Periods INDICATORS
+  // ---------------------
+    //5m  = 300
+    //15m = 900
+    //30m = 1800
+    //1h  = 3600
+    //2h  = 7200
+    //4h  = 14400
+    //6h  = 21600
+    //12h = 43200
+    //1d  = 86400
+    //1w  = 604800
+
+
+  // ---------------------
+  // Bottom_Finder
+  // ---------------------
+    // 14440 (4h)
+    //A
+    "Indicators4hBottomFinderCandlePeriod": "14400",
+    "Indicators4hBottomFinderLength": "20",
+    "Indicators4hBottomFinderStd": "2",
+    // 3600 (1h)
+    //B
+    "Indicators1hEmagainBottomFinderCandlePeriod": "3600",
+    "Indicators1hEmagainBottomFinderCrossCandles": "80",
+    "Indicators1hEmagainBottomFinderFastLength": "8",
+    "Indicators1hEmagainBottomFinderSlowLength": "13",
+    //C
+    "Indicators1hEmacrossBottomFinderCandlePeriod": "3600",
+    "Indicators1hEmacrossBottomFinderCrossCandles": "80",
+    "Indicators1hEmacrossBottomFinderFastLength": "8",
+    "Indicators1hEmacrossBottomFinderSlowLength": "13",
+    //D
+    "Indicators1hRsiBottomFinderCandlePeriod": "3600",
+    "Indicators1hRsiBottomFinderLength": "7",
+    // 300 (5min)
+    //E
+    "Indicators5minRsiSignalCandlePeriod": "300",
+    "Indicators5minRsiSignalLength": "7",
+    "Indicators5minRsiSignalOnlyClosedCandles": "true",
+
+    
+  // ---------------------
+  // ATR Percentage
+  // ---------------------
+    // 15min
+    // ->     Trailing Buy Strategy
+    // -> Dca Trailing Buy Strategy
+    // ->     Trailing StopLoss Strategy
+    // -> Dca Trailing StopLoss Strategy
+    "IndicatorsAtrpercentageIndicator": "EMA",
+    "IndicatorsAtrpercentageCandlePeriod": "900",
+    "IndicatorsAtrpercentageLength": "50",
+    "IndicatorsAtrpercentageOffset": "1",
+    "IndicatorsAtrpercentageOnlyClosedCandles": "true",
+
+
+  // ---------------------
+  // Safety
+  // ---------------------
+    // 4h
+    "IndicatorsSafety_4hMacdlongCandlePeriod": "14400",
+    "IndicatorsSafety_4hMacdlongFastLength": "144",
+    "IndicatorsSafety_4hMacdlongSlowLength": "233",
+    "IndicatorsSafety_4hMacdlongSignal": "50",
+    //5min (peut ête utiliser comme signal de vente fort)
+    "IndicatorsSafety_5minMacdlongCandlePeriod": "300",
+    "IndicatorsSafety_5minMacdlongFastLength": "144",
+    "IndicatorsSafety_5minMacdlongSlowLength": "233",
+    "IndicatorsSafety_5minMacdlongSignal": "50",
+
+
+  // ---------------------
+  // 5min
+  // ---------------------
+    //C
+    "IndicatorsHmaentry5minshortCandlePeriod": "300",
+    "IndicatorsHmaentry5minshortFastLength": "9",
+    "IndicatorsHmaentry5minshortSlowLength": "9",
+    //D
+    "IndicatorsHmaentry5minlongCandlePeriod": "300",
+    "IndicatorsHmaentry5minlongFastLength": "50",
+    "IndicatorsHmaentry5minlongSlowLength": "50",
+    //E
+    "IndicatorsStoch5minCandlePeriod":"300",
+    "IndicatorsStoch5minLength":"14",
+    "IndicatorsStoch5minK":"3",
+    "IndicatorsStoch5minD":"5"
+
+
+  // ---------------------
+  // ...
+  // ---------------------
+
+
+  },
+  "Defaults": {
+
+    "PanicSellEnabled": "false",
+    "SellOnlyModeEnabled": "false",
+    "DcaIgnoreSellOnlyMode": "true",
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // C O S T S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+    "InitialCost": "15",
+    "DcaMaxCost": "100",
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // F I L T E R S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+    //Pairs
+    "MinBuyPrice": "0.00000600",
+    "MinBuyVolume": "200000",
+    //DCA
+    "DcaMinBuyVolume": "100000", // 50% de MinBuyVolume
+
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // S A F E T I E S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+    //Pairs
+    "MaxBuySpread": "2",
+    "RebuyTimeout": "240", //4h
+    "MinOrderbookVolumePercentage": "101",
+
+    //DCA
+    "DcaMaxBuySpread": "2",
+    "DcaRebuyTimeout": "240", //4h
+    "DcaMinOrderbookVolumePercentage": "101",
+
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // T R A I L I N G S Buy
+  // -------------------------------------------------------------------------------------------------------------------------------------------------  
+    
+    //Pairs
+    "TrailingProfit": "0.15",
+    "TrailingProfitType": "GROW",
+    //DCA
+    "DcaTrailingProfit": "0.5",
+    "DcaTrailingProfitType": "GROW",
+
+
+//Phil recommande ATR 50 période
+//Recommande un ATR de *2
+
+    //Pairs
+    "TrailingBuyStrategy": "ATRPERCENTAGE",
+    "TrailingBuy": "0.2 * V",
+    //DCA
+    "DcaTrailingBuyStrategy": "ATRPERCENTAGE",
+    "DcaTrailingBuy": "0.2 * V",
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // T A K E  P R O F I T S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+
+    //TP Safety
+    //Psirs
+    "TakeProfitSafetyArm": "2.5",
+    "TakeProfitSafetyFire": "1.5",
+    //DCA
+    "DcaTakeProfitSafetyArm": "2.5",
+    "DcaTakeProfitSafetyFire": "1.5",
+    
+// Stop payé (gestion du risque)
+// Validation = TP1 ( a placer sur le support(résistance)) prendre 50% de gain pour payé le stop
+// Le stoploss doit couter au maximum le montant gagné par le TP1 pour ne pas perdre d'argent
+// Permet de réduire le risque mais réduit le gain aussi
+
+    //TP1
+    //Pairs
+    "So1TakeProfitTarget": "2",
+    "So1TakeProfitPortion": "50",
+    //DCA
+    "DcaSo1TakeProfitTarget": "2",
+    "DcaSo1TakeProfitPortion": "50",
+
+    //TP2
+    //Pairs
+    //"So2TakeProfitTarget": "4",
+    //"So2TakeProfitPortion": "50",
+    //DCA
+    //"DcaSo2TakeProfitTarget": "4",
+    //"DcaSo2TakeProfitPortion": "50",
+
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // S T O P  L O S S E S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+
+    //nombre de minutes pendant lesquelles le bot n'est pas autorisé à acheter une pièce après sa vente par le déclencheur stop loss
+    "StopLossTimeout": "240", //4h
+    "DcaStopLossTimeout": "240", //4h
+
+    //Pairs - SL Safety
+    "TrailingStopLossTriggerArm": "1.8",
+    "TrailingStopLossStrategy": "ATRPERCENTAGE",
+    "TrailingStopLossTrigger": "2 * V",
+
+
+    //DCA - SL Safety
+    "DcaDcaTrailingStopLossTriggerArm": "1.8",
+    "DcaDcaTrailingStopLossStrategy": "ATRPERCENTAGE",
+    "DcaDcaTrailingStopLossTrigger": "1.5 * V",
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // D C A  S E T T I N G S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+    "DcaEnabled": "-2.5",
+    "DcaBuyTrigger": "-1",
+    "DcaBuyPercentage": "100",
+    "DcaMaxBuyTimes": "3",
+    "indicatorsSomTriggerLength": "288"
+  },
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // M A R K E T C O N D I T I O N S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+
+  "MarketConditionsGrouping": {
+    "Configs": [
+      {
+// -----------------------------------------------------------------------------------------
+//SuperBear
+        "Name": "SUPERBEAR",
+        "MaxTopCoinAverageChange": "-2.5",
+        "MaxTopCoinLongTermAverageChange": "-2.5",
+        "MinBaseCoinPriceChange": "3.5",
+        "MaxBaseCoinPriceChange": "-3",
+        "Override": {
+          "InsertSnippets": "NoBuy,DcaBottomFinder",
+          "Weight": "99"
+        }
+      },
+      {
+// -----------------------------------------------------------------------------------------
+//Bear
+//Etape 0 - Sécurité (éviter d'acheter sur une mèche)
+//Etape 1 - Contexte (Range neutre / Range tendanciel / Tendance)
+//Etape 2 - Maturité (Validation / Confirmation / Invalidation / Etc...)
+//Etape 3 - Action   (Gestion du risque => TP 25% / TP 50% / TP Total / SL BE / SL Payé )
+        "Name": "Bear",
+        "MaxTopCoinAverageChange": "-2",
+        "MaxTopCoinLongTermAverageChange": "-1.75",
+        "MinBaseCoinPriceChange": "2.5",
+        "MaxBaseCoinPriceChange": "-2",
+          "Override": {
+          "InsertSnippets": "BottomFinder,DcaBottomFinder",
+            //Pairs
+            "SellOnlyModeEnabled": "true",
+            //DCA
+            "DcaSellOnlyModeEnabled": "true"
+        }
+      },
+      {
+// -----------------------------------------------------------------------------------------
+//Boring
+//Etape 0 - Sécurité (éviter d'acheter sur une mèche)
+//Etape 1 - Contexte (Range neutre / Range tendanciel / Tendance)
+//Etape 2 - Maturité (Validation / Confirmation / Invalidation / Etc...)
+//Etape 3 - Action   (Gestion du risque => TP 25% / TP 50% / TP Total / SL BE / SL Payé )
+        "Name": "Boring",
+        "MaxTopCoinAverageChange": "2.5",
+        "MaxTopCoinLongTermAverageChange": "5",
+          "Override": {
+          "InsertSnippets": "BottomFinder,DcaBottomFinder",
+          //Pairs
+          "SellOnlyModeEnabled": "true",
+          //DCA
+          "DcaSellOnlyModeEnabled": "true"
+        }
+      },
+      {
+// -----------------------------------------------------------------------------------------
+//Bull
+//Etape 0 - Sécurité (éviter d'acheter sur une mèche)
+//Etape 1 - Contexte (Range neutre / Range tendanciel / Tendance)
+//Etape 2 - Maturité (Validation / Confirmation / Invalidation / Etc...)
+//Etape 3 - Action   (Gestion du risque => TP 25% / TP 50% / TP Total / SL BE / SL Payé )
+        "Name": "Bull",
+        "MaxTopCoinAverageChange": "5",
+        "MaxTopCoinLongTermAverageChange": "3.5",
+          "Override": {
+          "InsertSnippets": "Safety,5min,DcaBottomFinder",
+          //Pairs
+          "SellOnlyModeEnabled": "true",
+          //DCA
+          "DcaSellOnlyModeEnabled": "true"
+        }
+      },
+      {
+// -----------------------------------------------------------------------------------------
+//SuperBull
+//Etape 0 - Sécurité (éviter d'acheter sur une mèche)
+//Etape 1 - Contexte (Range neutre / Range tendanciel / Tendance)
+//Etape 2 - Maturité (Validation / Confirmation / Invalidation / Etc...)
+//Etape 3 - Action   (Gestion du risque => TP 25% / TP 50% / TP Total / SL BE / SL Payé )
+        "Name": "SuperBull",
+        "MaxTopCoinAverageChange": "10000",
+        "MaxTopCoinLongTermAverageChange": "10000",
+          "Override": {
+          "InsertSnippets": "Safety,5min,DcaBottomFinder",
+          //Pairs
+          "SellOnlyModeEnabled": "true",
+          //DCA
+          "DcaSellOnlyModeEnabled": "true"
+        }
+      }
+    ]
+  },
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // SNIPPETS
+  //--------------------------------------------------------------------------------------------------------------------------------------------------
+  "Snippets": [
+    {
+      "SnippetName": "NoBuy",
+      // Pairs
+      "SellOnlyModeEnabled": "true",
+      //DCA
+      "DcaSellOnlyModeEnabled": "true",
+      "Weight": "999"
+    },
+  // -----------------------------------------------------------------------------------------
+    {
+      "SnippetName": "Safety",
+      "BuyStrategyFormula": "(A && B)",
+      //A
+      "ABuyStrategyLabel": "Safety_4hMacdlong",
+      "ABuyStrategy": "MACD",
+      "ABuyValue": "0.00000002",
+      "ABuyValueLimit": "1",
+      //B
+      "BBuyStrategyLabel": "Safety_5minMacdlong",
+      "BBuyStrategy": "MACD",
+      "BBuyValue": "0.00000002",
+      "BBuyValueLimit": "1",
+      "Weight": "100"
+    },
+  // -----------------------------------------------------------------------------------------
+    {
+      "SnippetName": "BottomFinder",
+      // Security
+      // Context
+      // Maturity
+      // Action
+
+      "TrailingBuy": "0.01",
+      "BuyStrategyFormula": "(A && B && C && D && E)",
+
+      //A
+      "ABuyStrategyLabel": "4h_Bottom_Finder",
+      "ABuyStrategy": "LOWBB",
+      "ABuyValue": "30",
+      "ABuyValueLimit": "-100",
+      //B
+      "BBuyStrategyLabel": "1h_Emagain_Bottom_Finder",
+      "BBuyStrategy": "EMAGAIN",
+      "BBuyValue": "-0.01",
+      "BBuyValueLimit": "-10",
+      //C
+      "CBuyStrategyLabel": "1h_Emacross_Bottom_Finder",
+      "CBuyStrategy": "EMACROSS",
+      "CBuyValue": "-0.01",
+      "CBuyValueLimit": "-20",
+      //D
+      "DBuyStrategyLabel": "1h_Rsi_Bottom_Finder",
+      "DBuyStrategy": "RSI",
+      "DBuyValue": "20",
+      "DBuyValueLimit": "0",
+      //E
+      "EBuyStrategyLabel": "5Min_RSI_Signal",
+      "EBuyStrategy": "RSI",
+      "EBuyValue": "23",
+      "EBuyValueLimit": "0",
+
+      "Weight": "100"
+    },
+  // -----------------------------------------------------------------------------------------
+    {
+      "SnippetName": "DcaBottomFinder",
+      // Security
+      // Context
+      // Maturity
+      // Action
+
+      "TrailingBuy": "0.01",
+      "BuyStrategyFormula": "(A && B && C && D && E)",
+
+      //A
+      "DcaABuyStrategyLabel": "4h_Bottom_Finder",
+      "DcaABuyStrategy": "LOWBB",
+      "DcaABuyValue": "30",
+      "DcaABuyValueLimit": "-100",
+      //B
+      "DcaBBuyStrategyLabel": "1h_Emagain_Bottom_Finder",
+      "DcaBBuyStrategy": "EMAGAIN",
+      "DcaBBuyValue": "-0.01",
+      "DcaBBuyValueLimit": "-10",
+      //C
+      "DcaCBuyStrategyLabel": "1h_Emacross_Bottom_Finder",
+      "DcaCBuyStrategy": "EMACROSS",
+      "DcaCBuyValue": "-0.01",
+      "DcaCBuyValueLimit": "-20",
+      //D
+      "DcaDBuyStrategyLabel": "1h_Rsi_Bottom_Finder",
+      "DcaDBuyStrategy": "RSI",
+      "DcaDBuyValue": "20",
+      "DcaDBuyValueLimit": "0",
+      //E
+      "DcaEBuyStrategyLabel": "5Min_RSI_Signal",
+      "DcaEBuyStrategy": "RSI",
+      "DcaEBuyValue": "23",
+      "DcaEBuyValueLimit": "0",
+
+      "Weight": "100"
+    },
+  // -----------------------------------------------------------------------------------------
+    {
+      "SnippetName": "5min",
+  
+      "BuyStrategyFormula": "(A || B) && (C && D && E)",
+      "TrailingBuy":"0",
+
+      //A -> Safety
+      //B -> Safety
+      //C
+      "CBuyStrategyLabel":"HMAENTRY5MINSHORT",
+      "CBuyStrategy": "HMAGAIN",
+      "CBuyValue":"0.1",
+      //D
+      "DBuyStrategyLabel":"HMAENTRY5MINLONG",
+      "DBuyStrategy": "HMAGAIN",
+      "DBuyValue":"0.1",
+      //E
+      "EBuyStrategyLabel":"STOCH5MIN",
+      "EBuyStrategy": "STOCH",
+      "EBuyValue":"40",
+
+      "Weight": "100"
+    }
+  ],
+  // A contrôler avec les TP et ATR
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // D Y N A M I C  G A I N
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+
+  "DynamicGainSizeGrouping": {
+    "Condition": "[pair.Profit] >= [config.TargetProfit]",
+    "Configs": [
+      {
+        "TargetProfit": "7.5",
+        "Override": {
+          //Pairs
+          "ASellStrategy": "GAIN",
+          "ASellValue": "10",
+          "TakeProfitSafetyFire": "6",
+          //DCA
+          "DcaASellStrategy": "GAIN",
+          "DcaASellValue": "10",
+          "DcaTakeProfitSafetyFire": "6",
+          "DcaStopBeforeComplete": "true",
+          "Weight": "66"
+        }
+      },
+      // -------------------------------------------------------------------------------------------------------------------------------------------------
+      {
+        "TargetProfit": "5.5",
+        "Override": {
+          //Pairs
+          "ASellStrategy": "GAIN",
+          "ASellValue": "7",
+          "TakeProfitSafetyFire": "4.0",
+          //DCA
+          "DcaASellStrategy": "GAIN",
+          "DcaASellValue": "7",
+          "DcaTakeProfitSafetyFire": "4.0",
+          "DcaStopBeforeComplete": "true",
+          "Weight": "64"
+        }
+      },
+      // -------------------------------------------------------------------------------------------------------------------------------------------------
+      {
+        "TargetProfit": "3.5",
+        "Override": {
+          //Pairs
+          "ASellStrategy": "GAIN",
+          "ASellValue": "5",
+          "TakeProfitSafetyFire": "2.0",
+          //DCA
+          "DcaASellStrategy": "GAIN",
+          "DcaASellValue": "5",
+          "DcaTakeProfitSafetyFire": "2.0",
+          "DcaStopBeforeComplete": "true",
+          "Weight": "63"
+        }
+      }
+    ]
+  }
+}
+
+
+
+//1
+// faire une règle que si le volume est trop faible il faut panic sell
+// La règle pourais être que "si volume est plus petit que 150000 alors panic sell"
+// Adapter la règle pour les pairs qui sont traider exemple BTC/ETH
+// "MinBuyVolume": "200000",
+
+//2
+//Faire qui si en DCA depuis trop longtemps panic sell parceque le bot ne travaille pas durant ce temps la.
+//"DcaTimeManagementGrouping": {
+//  "Condition": "[pair.DcaCount] >= [config.DcaCount]",
+//  "Configs": [
+//    {
+//      "DcaCount": "5",
+//       "Override": {
+//       "DcaRebuyTimeout": "86400",
+//       "Weight": "70"
+//      }
+//    }
+//  ]
+//},
+
+//3
+// Introduire les notion ci-dessous pour chaque stratégie de traide
+//Etape 0 - // Sécurité (éviter d'acheter sur une mèche)
+//Etape 1 - Contexte (Range neutre / Range tendanciel / Tendance)
+//Etape 2 - Maturité (Validation / Confirmation / Invalidation / Etc...)
+//Etape 3 - Action   (Gestion du risque => TP 25% / TP 50% / TP Total / SL BE / SL Payé )
+
+//3 Bis
+// Contexte
+//  => Pré-requis
+//    - Marché suffisament fluide ?
+//    - Historique de trading suffisant ?
+//    - Volatilité suffisante pour traider ?
+
+//----------------------------------------//        - VALIDATION
+//              RANGE NEUTRE              //          -> Atteint la borne opposé au canal de tendance
+//=> CONDITION D'ENTREE                   //           - Risque faible     => TP 50% / SL payé
+//    - Mini 76% de retracement           //           - Risque modéré     => TP 25% / SL payé
+//    - Déborder le contexte              //           - Trading agressif  => SL BE
+//    - Signal + triangle                 //
+//                                        //        - CONFIRMATION
+//                                        //         -> Atteint 50% du canal de contexte
+//                                        //           - Risque faible     => SL BE
+//                                        //           - Risque modéré     => TP 25% et SL BE
+//                                        //           - Trading agressif  => TP 50%
+//                                        //
+//                                        //        - LIMITE
+//                                        //         -> 76.4 de retracement
+//                                        //           - Risque faible     => TP total
+//                                        //           - Risque modéré     => TP total 
+//                                        //           - Trading agressif  => TP total 
+//                                        //
+//                                        //         - INVALIDATION
+//                                        //          -> Accélération du canal de tendance avec clotures
+//                                        //           - Risque faible     => TP 50% et SL BE
+//                                        //           - Risque modéré     => TP BE
+//----------------------------------------//           - Trading agressif  => TB BE
+
+//*********************************************************************************************************************
+
+//----------------------------------------//        - VALIDATION
+//              RANGE TENDANCIEL          //          -> Atteint la borne opposé au canal de tendance
+//=> CONDITION D'ENTREE                   //           - Risque faible     => TP 25% / SL payé 
+//    - Mini 61% de retracement           //           - Risque modéré     => TP 25% 
+//    - Entrée dans le contexte           //           - Trading agressif  => ---
+//    - Signal + triangle                 //
+//                                        //        - CONFIRMATION
+//                                        //         -> Atteint la borne opposé du canal de contexte
+//                                        //           - Risque faible     => TP 50% / SL BE
+//                                        //           - Risque modéré     => TP 50% / SL BE
+//                                        //           - Trading agressif  => TP 50% / SL BE
+//                                        //
+//                                        //        - TARGET 1
+//                                        //         -> Arrivé dans la zone d'objectif de la borne opposé du range
+//                                        //           - Risque faible     => TP TOTAL
+//                                        //           - Risque modéré     => TP TOTAL
+//                                        //           - Trading agressif  => TP 25% / SL gain
+//                                        //
+//                                        //         - INVALIDATION
+//                                        //          -> Cassure de la tendance (dernier support/résistance)
+//                                        //           - Risque faible     => TP 50% / TP BE
+//                                        //           - Risque modéré     => TP BE
+//----------------------------------------//           - Trading agressif  => TP BE
+
+//*********************************************************************************************************************
+
+//----------------------------------------//        - ACCUMULATION
+//                TENDANCE                //          -> Rejet des prix par le canal de tendance et retour au contexte
+//=> CONDITION D'ENTREE                   //           - Risque faible     => Attente
+//    - Mini 23% de retracement           //           - Risque modéré     => Renfort 25%
+//    - Proche du canal de tendance       //           - Trading agressif  => Renfort 50%
+//    - Signal couleur + triangle         //
+//                                        //        - BREAKOUT
+//                                        //         -> Cassure de l'accumulation + Volume + Breakout Framework 
+//                                        //           - Risque faible     => Entrée 100%
+//                                        //           - Risque modéré     => Renfort 100%
+//                                        //           - Trading agressif  => Renfort 150%
+//                                        //
+//                                        //        - DIVERGENCE
+//                                        //         -> Apparition des divergences standards
+//                                        //           - Risque faible     => TP 50% / SL BE
+//                                        //           - Risque modéré     => TP 25% / SL BE
+//                                        //           - Trading agressif  => TP 25% / SL BE
+//                                        //
+//                                        //         - PULL-BACK
+//                                        //          -> Retour au canal de tendance + Retour mini sur 50% contexte 
+//                                        //           - Risque faible     => ---
+//                                        //           - Risque modéré     => ---
+//                                        //           - Trading agressif  => Renfort 50%
+//                                        //
+//                                        //        - Excès final
+//                                        //         -> Nouveau retour au contexte + Breakout Framework
+//                                        //           - Risque faible     => TP TOTAL
+//                                        //           - Risque modéré     => TP TOTAL
+//----------------------------------------//           - Trading agressif  => TP TOTAL
