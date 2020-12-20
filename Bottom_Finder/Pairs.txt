@@ -1,0 +1,183 @@
+#------------------------------------------------------------------------
+#Global
+#---------------------------------------
+market = USDT
+enabled_pairs = ALL
+max_trading_pairs = 10
+#hidden_pairs =
+#   max_trading_pairs_include_pending
+#   max_trading_pairs_ignore
+#   trading_pairs_buy_priority
+pair_min_listed_days = 180
+#   orderbook_profit_calculation
+
+#--------------------------------------
+#Buy
+#---------------------------------------
+DEFAULT_trading_enabled = true
+DEFAULT_trailing_buy = 0.1
+DEFAULT_trailing_buy_rebound_count = 1
+DEFAULT_DCA_enabled = -1
+DEFAULT_initial_cost = 2.5%
+#    buy_leverage
+#    buy_margin_type
+DEFAULT_min_buy_volume = TOP50
+#    min_buy_price
+DEFAULT_max_buy_spread = 1
+#    min_orderbook_volume_percentage
+#    min_orderbook_price_slippage_percentage
+DEFAULT_buy_timeout_after_sell = 1440
+#    buy_min_change_percentage
+#    buy_max_change_percentage
+#    sell_wall_orderbook_depth
+#    sell_wall_diff_percentage
+#    buy_cost
+#    buy_percentage
+#    max_cost
+#    max_buy_times
+
+#--------------------------------------
+#Buy Strategy / Trailing
+#---------------------------------------
+#    (X)_buy_strategy_label
+#    (X)_buy_strategy
+#    (X)_buy_value
+#    (X)_buy_value_limit
+#    (X)_buy_strategy_direction
+#DEFAULT_buy_strategy_formula = (A && B && C && D && E && F) || Z
+#    buy_strategy_level(x)_formula
+#    buy_strategy_level(x)_timeout
+#    buy_strategy_level(x)_reset_formula
+#    buy_within_time_period
+#    trailing_buy_enabled_formula
+
+#    trailing_buy_reset_with_strategies
+
+
+
+DEFAULT_A_Buy_Strategy_Label = Bottom_Finder_4h_BB
+DEFAULT_A_buy_strategy = LOWBB
+DEFAULT_A_buy_value = 30
+DEFAULT_A_buy_value_limit = -90
+
+DEFAULT_B_Buy_Strategy_Label = Bottom_Finder_1h_Emagain
+DEFAULT_B_buy_strategy = EMAGAIN
+DEFAULT_B_buy_value = -0.01
+DEFAULT_B_buy_value_limit = -10
+
+DEFAULT_C_Buy_Strategy_Label = Bottom_Finder_1h_Emacross
+DEFAULT_C_buy_strategy = EMACROSS
+DEFAULT_C_buy_value = -0.01
+DEFAULT_C_buy_value_limit = -20
+
+DEFAULT_D_Buy_Strategy_Label = Bottom_Finder_1h_Rsi
+DEFAULT_D_buy_strategy = RSI
+DEFAULT_D_buy_value = 20
+DEFAULT_D_buy_value_limit = 0
+
+DEFAULT_E_Buy_Strategy_Label = Bottom_Finder_5min_Rsi
+DEFAULT_E_buy_strategy = RSI
+DEFAULT_E_buy_value = 23
+DEFAULT_E_buy_value_limit = 0
+
+DEFAULT_F_Buy_Strategy_Label = Bottom_Finder_5min_Stoch
+DEFAULT_F_buy_strategy = STOCH
+DEFAULT_F_buy_value = 30
+DEFAULT_F_buy_value_limit = 0
+
+
+#--------------------------------------
+#Strategy / A un prix fixe
+#---------------------------------------
+
+#Buy
+ETH_buy_strategy_formula = (A && B && C && D && E && F) || Y || Z
+#
+ETH_Y_Buy_Strategy_Label = Prix_Fixe
+ETH_Y_buy_strategy = FIXEDPRICE
+ETH_Y_buy_value = 389.00
+#
+ETH_Z_Buy_Strategy_Label = Prix_Fixe
+ETH_Z_buy_strategy = FIXEDPRICE
+ETH_Z_buy_value = 216.00
+
+#---------------------------------------
+#Sell
+ETH_A_sell_strategy = GAIN
+ETH_A_sell_value = 200
+
+
+#--------------------------------------
+#Sell
+#---------------------------------------
+#    take_profit_percentage
+#    take_profit_reset_percentage_move
+#    take_profit_wait_time
+DEFAULT_take_profit_safety_arm = 1
+DEFAULT_take_profit_safety_fire = 0.5
+#    SO(x)_take_profit
+#    SO(x)_stop_loss
+#    stop_loss_timeout
+DEFAULT_Trailing_Stop_Loss_Strategy = ATRPERCENTAGE
+DEFAULT_trailing_stop_loss_trigger_arm = 1
+DEFAULT_trailing_stop_loss_trigger = 2 * V
+#    max_profit
+#    panic_sell_enabled
+
+
+
+#--------------------------------------
+#Sell Strategy / Trailing
+#---------------------------------------
+#    (X)_sell_strategy_label
+#    (X)_sell_strategy
+#    (X)_sell_value
+#    (X)_sell_value_limit
+#    (X)_sell_strategy_direction
+#    sell_strategy_formula
+#    sell_strategy_level(x)_formula
+#    sell_strategy_level(x)_timeout
+#    sell_strategy_level(x)_reset_formula
+#    sell_within_time_period
+DEFAULT_trailing_profit = 0.1
+#    trailing_profit_type
+#    trailing_profit_enabled_formula
+#    trailing_profit_rebound_count
+#    trailing_profit_reset_with_strategies
+
+DEFAULT_A_sell_strategy = GAIN
+DEFAULT_A_sell_value = 10
+
+
+
+#--------------------------------------
+#SOM
+#---------------------------------------
+#    sell_only_mode_enabled
+#    price_trigger_market
+#    consecutive_trigger
+#    price_drop_trigger
+#    price_rise_trigger
+
+#--------------------------------------
+#Reversal
+#---------------------------------------
+#    reversal_start_trigger DYN
+#    reversal_rebuy_drop_trigger
+#    reversal_rebuy_rise_trigger
+
+#--------------------------------------
+#Pending
+#---------------------------------------
+#    combine_pending_orders
+#    pending_gain_percentage DYN
+#    pending_order_wait_time
+#    pending_order_price_drop_trigger DYN
+#    combined_cancel_pending_trigger DYN
+#    cancel_pending_trigger DYN
+#    cancel_pending_prevent_balance_merge
+
+#--------------------------------------
+#trading_enabled
+#---------------------------------------
+XXXXXX_trading_enabled = false
