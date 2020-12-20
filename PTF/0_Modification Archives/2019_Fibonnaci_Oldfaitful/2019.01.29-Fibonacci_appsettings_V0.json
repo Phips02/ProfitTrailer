@@ -1,0 +1,641 @@
+//##########################################################################################################
+//#                      Settings for ProfitTrailer 2.2                                                    #
+//#                      BEAR MARKET - FIBONACCI_DAYTRADER                                                 #
+//##########################################################################################################
+//# developer:           Discord : Phips#8876 // Telegram : @Phips01                                       #
+//#                                                                                                        #
+//# developed for :      Binance                                                                           #
+//# File:                PAIRS.properties                                                                  #
+//#                                                                                                        #
+//# Creation date :      2019.01.05                                                                        #
+//# Last Update:         2019.01.25                                                                        #
+//#                                                                                                        #
+//##########################################################################################################
+
+{
+  "PtFeeder": {
+    "BaseCurrency": "ETH",
+
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // P T F  L I S T S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    "HiddenCoins": "", // coins that will be hidden from the PT Monitor
+    "ExcludedCoins": "", // coins you don't want PTF to create settings for. These will have no config generated and will appear in watchmode
+    "SomOnlyCoins": "", // these are coins where BASE_COIN_sell_only_mode will be true
+
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // M E A S U R E  T I M E S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    "MeasureTimes": [
+      15,
+      60,
+      1440
+    ],
+
+	
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // A U T O  W H I T E L I S T 
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	"AutoTopCoinWhitelist": "true",
+    "TopCurrenciesToCheck": "35", // number of pairs to check from your exchange for MaxTopCoinAverageChange
+	
+	// -------------------------------------------------------------------------------------------------------------------------------------------------
+    // T R A I L I N G S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    
+	// PAIRS
+	"MinTrailingBuy": "0.05",
+	"MaxTrailingBuy": "0.25",
+	
+	"MinTrailingProfit": "0.05",
+	"MaxTrailingProfit": "0.50",
+	
+	//DCA
+	"DcaMinTrailingBuy": "0.05",
+	"DcaMaxTrailingBuy": "0.25",
+
+	"DcaMinTrailingProfit": "0.05",
+	"DcaMaxTrailingProfit": "0.50",
+	
+	// -------------------------------------------------------------------------------------------------------------------------------------------------
+    // P T F  I N D I C A T O R S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+
+    "FeederCandleSize": "5m",
+
+    "EmaShortCandleSize": "5m",
+    "EmaLongCandleSize": "5m",
+    "SmaShortCandleSize": "5m",
+    "SmaLongCandleSize": "5m",
+    "EmaShortPeriod": "13",
+    "EmaLongPeriod": "63",
+    "SmaShortPeriod": "13",
+    "SmaLongPeriod": "63",
+    "RsiLongPeriod": "40",
+    "RsiShortPeriod": "20",
+    "RsiShortCandleSize": "5m",
+    "RsiLongCandleSize": "5m",
+    "BaseHighLowPriceChangeCandleSize": "5m",
+    "HighestCandlesSize": "5m",
+    "LowestCandlesSize": "5m"
+  },
+  
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // C O M M O N  S E T T I N G S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  "Common": {
+
+    "OrderbookProfitCalculation": "true",
+	"DcaOrderbookProfitCalculation": "true",
+    "DcaSomDcaBuyTrigger": "-20",
+	
+	"ConsecutiveBuyTrigger": "8", 	// consecutive_buy_trigger Turn on sell only mode if we got x consecutive buys and no sells in between (market is going down). 
+    "ConsecutiveSellTrigger": "3", 	// Turn off sell only mode if we got x consecutive sells with no buys in between (market is recovering)
+
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // B A L A N C E S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    
+	//PAIRS
+	"MaxTradingPairs": "16",
+    "StartBalance": "10",
+    "KeepBalance": "0",
+    "KeepBalancePercentage": "50",
+	
+    //DCA
+	"DcaMaxTradingPairs": "8",
+    "DcaKeepBalance": "0",
+    "DcaKeepBalancePercentage": "0",
+
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // P T  I N D I C A T O R S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    
+	"Indicators1dEmagain_100jCandlePeriod": "86400",
+	"Indicators1dEmagain_100jFastLength": "100",
+	"Indicators1dEmagain_100jSlowLength": "100",
+	
+	"Indicators1dEmagain_50jCandlePeriod": "86400",
+	"Indicators1dEmagain_50jFastLength": "50",
+	"Indicators1dEmagain_50jSlowLength": "50",
+	
+	"Indicators1dEmagain_1jCandlePeriod": "86400",
+	"Indicators1dEmagain_1jFastLength": "1",
+	"Indicators1dEmagain_1jSlowLength": "1",
+	
+	"Indicators1dRsiCandlePeriod": "86400",
+	"Indicators1dRsiLength": "7",
+	
+	"IndicatorsFibonacci_13_34CandlePeriod": "300",
+	"IndicatorsFibonacci_13_34CrossCandles": "500",
+	"IndicatorsFibonacci_13_34FastLength": "13",
+	"IndicatorsFibonacci_13_34SlowLength": "34",
+	
+	"IndicatorsFibonacci_55_89CandlePeriod": "300",
+	"IndicatorsFibonacci_55_89CrossCandles": "500",
+	"IndicatorsFibonacci_55_89FastLength": "55",
+	"IndicatorsFibonacci_55_89SlowLength": "89",
+	
+	"IndicatorsOldfaithfulEmacrossCandlePeriod": "1800",
+	"IndicatorsOldfaithfulEmacrossCrossCandles": "40",
+	"IndicatorsOldfaithfulEmacrossFastLength": "8",
+	"IndicatorsOldfaithfulEmacrossSlowLength": "13",
+	
+	"IndicatorsOldfaithfulEmagainCandlePeriod": "1800",
+	"IndicatorsOldfaithfulEmagainCrossCandles": "40",
+	"IndicatorsOldfaithfulEmagainFastLength": "8",
+	"IndicatorsOldfaithfulEmagainSlowLength": "13",
+	
+	"IndicatorsOldfaithfulBbCandlePeriod": "900",
+	"IndicatorsOldfaithfulBbLength": "20",
+	"IndicatorsOldfaithfulBbStd": "2",
+	
+	"IndicatorsOldfaithfulRsiCandlePeriod": "300",
+	"IndicatorsOldfaithfulRsiLength": "7",
+	
+	"IndicatorsConnorsmacdCandlePeriod": "300",
+	"IndicatorsConnorsmacdFastLength": "13",
+	"IndicatorsConnorsmacdSlowLength": "21",
+	"IndicatorsConnorsmacdSignal": "3",
+	
+	"Indicators15minBbCandlePeriod": "900",
+	"Indicators15minBbLength": "20",
+	"Indicators15minBbStd": "2",
+	
+    "IndicatorsSomTriggerLength": "288"
+
+  },
+  
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // D E F A U L T S  S E T T I N G S 
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+ "Defaults": {
+
+    "PanicSellEnabled": "false",
+    "DcaIgnoreSellOnlyMode": "true",	
+
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // C O S T S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    
+	// PAIRS
+    // Voir reglage => M A R K E T  C O N D I T I O N S
+	//"InitialCost": "0",
+    //"InitialCostPercentage": "2.5",
+	
+	// DCA
+    "DcaMaxCost": "0",
+	"DcaMaxCostPercentage": "0",
+
+
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // F I L T E R S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    
+	// PAIRS
+	"MinBuyPrice": "0.000000600",
+	
+	// Voir reglage => E X C H A N G E pour Bittrex
+	"MinBuyVolume": "500",
+	
+	"BuyMinChangePercentage": "0.1",
+	"BuyMaxChangePercentage": "15",
+	
+	"DCABuyMinChangePercentage": "0",
+	"DcaBuyMaxChangePercentage": "25",
+	
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // S A F E T I E S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    
+	"SellWallOrderbookDepth": "100",
+	"SellWallDiffPercentage": "5000",
+	
+	"DcaSellWallOrderbookDepth": "100",
+	"DcaSellWallDiffPercentage": "5000",
+
+	// PAIRS
+	"MaxBuySpread": "3",
+    "MinOrderbookVolumePercentage": "120",
+    "RebuyTimeout": "1440",
+	
+	// DCA
+    "DcaMinBuyVolume": "1",
+    "DcaMinOrderbookVolumePercentage": "120",
+    "DcaMaxBuySpread": "3",
+    "DcaRebuyTimeout": "1440",
+
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // T R A I L I N G S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    
+	//PT Feeder calcule automatiquement le trailing si ces réglages sont désactiver :
+	// PAIRS
+	
+	//"TrailingBuy": "0.20",
+	
+	//"TrailingProfit": "0.50",
+	//"TrailingProfitReboundCount": "0",
+	"TrailingProfitType": "GROW",
+	
+	// DCA
+	
+	//"DcaTrailingBuy": "0.20",
+	
+	//"DcaTrailingProfit": "0.25",
+	//"DCATrailingProfitReboundCount": "0",
+	"DcaTrailingProfitType": "GROW",
+
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // T A K E  P R O F I T S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    
+	// PAIRS
+	"TakeProfitWaitTime": "10",
+    "TakeProfitPercentage": "3",
+	"TakeProfitResertPercentageMove": "0.25",
+	
+	"TakeProfitSafetyArm": "2.0",
+	"TakeProfitSafetyFire": "1.0",
+
+	"MaxProfit": "0",
+
+	
+	// DCA
+    "DcaTakeProfitWaitTime": "10",
+    "DcaTakeProfitPercentage": "3",
+	"DcaTakeProfitResertPercentageMove": "0.25",
+	
+	"DcaTakeProfitSafetyArm": "2.0",
+	"DcaTakeProfitSafetyFire": "1.0",
+
+    "DcaMaxProfit": "0",
+	
+	// -------------------------------------------------------------------------------------------------------------------------------------------------
+    // P E N D I N G 
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    
+	// PAIRS
+	"PendingOrderWaitTime": "7200",
+	"PendingOrderPriceDropTrigger": "0",
+	"CombinedCancelPendingTrigger": "0.1",
+	"CombinePendingOrders": "true",
+	"PendingGainPercentage": "1.5",
+
+
+	
+	// DCA
+	"DcaPendingOrderWaitTime": "0",
+	"DcaPendingOrderPriceDropTrigger": "0",
+	"DcaCombinedCancelPendingTrigger": "0.1",
+	"DcaCombinePendingOrders": "true",
+	"DcaPendingGainPercentage": "1.5",
+
+
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // S T O P  L O S S 
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	// PAIRS
+	"StopLossTrigger": "0",
+    "StopLossTimeout": "1440",
+	"TrailingStopLossTriggerArm": "3",
+	"TrailingStopLossTrigger": "-2.5",
+
+
+	// DCA
+    "DcaStopLossTrigger": "-8",
+    "DcaStopLossTimeout": "1440",
+	"DcaTrailingStopLossTriggerArm": "3",
+	"DcaTrailingStopLossTrigger": "-2.5",
+	
+	// *************************************************************************************************************
+	// Si defini sur true, Stoploss dans DCA se comportera de la meme maniere que dans le menu paires.             *
+	// =>                  une fois que le pourcentage fixe est atteint, la piece se vendra comme un stoploss.     *
+	//                                                                                                             *
+	// Si la valeur est false, le STOP LOSS ne se produira pas tant que DCA n'est pas termine.                     *
+	// =>                  max_buy_times est atteint OU                                                            *
+    // =>                  max_cost est atteint OU                                                                 *
+    // =>                  il n’ya pas assez de balance pour continuer à utiliser DCA.                             *
+	//                                                                                                             *
+	//                                                                                                             *
+	//"DcaStopBeforeComplete": "true",
+	"DcaStopBeforeComplete": "false",
+	//                                                                                                             *
+    // *************************************************************************************************************
+
+
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // B U Y  S T R A T S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	// PAIRS
+	"ABuyStrategyLabel": "1d_Emagain_100j",
+    "ABuyStrategy": "EMAGAIN",
+    "ABuyValue": "1",
+	
+	"BBuyStrategyLabel": "1d_Emagain_50j",
+	"BBuyStrategy": "EMAGAIN",
+    "BBuyValue": "1",
+	
+    "CBuyStrategyLabel": "1d_Emagain_1j",
+    "CBuyStrategy": "EMAGAIN",
+    "CBuyValue": "-0.1",
+	
+	"DBuyStrategyLabel": "1d_RSI",
+    "DBuyStrategy": "RSI",
+    "DBuyValue": "75",
+	"DBuyValueLimit": "25",
+	
+	"EBuyStrategyLabel": "Fibonacci_55_89",
+    "EBuyStrategy": "EMACROSS",
+    "EBuyValue": "0.01",
+	"EBuyValueLimit": "30",
+	
+	"FBuyStrategyLabel": "Fibonacci_13_34",
+    "FBuyStrategy": "EMACROSS",
+    "FBuyValue": "0.01",
+	"FBuyValueLimit": "30",
+
+	// DCA
+	"DcaABuyStrategyLabel": "Oldfaithful_Emacross",
+    "DcaABuyStrategy": "EMACROSS",
+    "DcaABuyValue": "-0.01",
+    "DcaABuyValueLimit": "-10",
+	
+	"DcaBBuyStrategyLabel": "Oldfaithful_Emagain",
+    "DcaBBuyStrategy": "EMAGAIN",
+    "DcaBBuyValue": "-0.1",
+    "DcaBBuyValueLimit": "-30",
+	
+	"DcaCBuyStrategyLabel": "Oldfaithful_Bb",
+    "DcaCBuyStrategy": "LOWBB",
+    "DcaCBuyValue": "-5",
+    "DcaCBuyValueLimit": "-35",
+	
+	"DcaDBuyStrategyLabel": "Oldfaithful_Rsi",
+    "DcaDBuyStrategy": "RSI",
+    "DcaDBuyValue": "23",
+    "DcaDBuyValueLimit": "0",
+
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // S E L L  S T R A T S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    
+	// PAIRS
+	// Voir réglage M A R K E T  C O N D I T I O N S
+    "ASellStrategy": "GAIN",
+    "ASellValue": "1.05",
+	
+	"BSellStrategyLabel": "1d_Emagain_1j",
+    "BSellStrategy": "EMAGAIN",
+    "BSellValue": "0.01",
+	
+	"CSellStrategyLabel": "Connorsmacd",
+    "CSellStrategy": "MACD",
+    "CSellValue": "-0.000000001",
+	
+	"DSellStrategyLabel": "15min_BB",
+    "DSellStrategy": "LOWBB",
+    "DSellValue": "50",
+	"DSelltrategyDirection": "DOWN",
+
+	// DCA
+	// Voir réglage M A R K E T  C O N D I T I O N S
+    "DcaASellStrategy": "GAIN",
+    "DcaASellValue": "1.05",
+
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    // D C A  S E T T I N G S
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+    
+	//DCA
+	"DcaEnabled": "-3",
+    "DcaBuyTrigger": "-2",
+	//"DcaBuyTrigger1": "-2",
+	//"DcaBuyTrigger2": "-3",
+	//"DcaBuyTrigger3": "-5",
+    "DcaBuyPercentage": "200",
+    "DcaMaxBuyTimes": "3"
+
+	
+  },
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // M A R K E T  C O N D I T I O N S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  "MarketConditionsGrouping": {
+    "Configs": [
+      { // BEAR MARKET
+        "Name": "Bear",
+        "MaxTopCoinAverageChange": "-5",
+		//"SwitchConfigTo": "El Dorado", // ATTENTION	=> Si cette fonction est utilisée, les autres réglage de PTF ne seront pas appliqué.
+        "Override": {
+			
+		//-----------------------------------------------
+		// P A I R S - BEAR MARKET
+		//-----------------------------------------------
+
+		// Buy	    
+		
+		// Sell
+
+		//-----------------------------------------------
+		// D C A - BEAR MARKET
+		//-----------------------------------------------
+		
+		// Buy
+		
+		// Sell
+
+        }
+      },
+  // *************************************************************************************************************************************************
+      { // BORING MARKET
+        "Name": "Boring",
+        "MaxTopCoinAverageChange": "2.5",
+		//"SwitchConfigTo": "El Dorado", // ATTENTION	=> Si cette fonction est utilisée, les autres réglage de PTF ne seront pas appliqué.
+        "Override": {
+		
+		//-----------------------------------------------
+		// P A I R S - BORING MARKET
+		//-----------------------------------------------
+
+		// Buy
+		"InitialCostPercentage": "2.75",
+		"RebuyTimeout": "15",
+		
+	
+		// Sell
+		"ASellStrategy": "GAIN",
+		"ASellValue": "1.05",
+
+
+		
+		//-----------------------------------------------
+		// D C A - BORING MARKET
+		//-----------------------------------------------
+		
+		// Buy
+
+		
+		// Sell
+		"DcaASellStrategy": "GAIN",
+        "DcaASellValue": "1.05"
+
+        }
+      }, 
+  // *************************************************************************************************************************************************
+      { // BULL MARKET
+        "Name": "Bull",
+        "MaxTopCoinAverageChange": "5",
+		//"SwitchConfigTo": "El Dorado", // ATTENTION	=> Si cette fonction est utilisée, les autres réglage de PTF ne seront pas appliqué.
+        "Override": {
+			
+			
+		//-----------------------------------------------
+		// P A I R S - BULL MARKET
+		//-----------------------------------------------
+
+		// Buy
+
+		// Sell
+
+		
+		//-----------------------------------------------
+		// D C A - BULL MARKET
+		//-----------------------------------------------
+
+		// Buy
+		
+		// Sell
+
+        }
+      }
+    ]
+  },
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // P R I C E  T R E N D
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  "PriceTrendChangeGrouping": {
+    "Configs": [
+      {
+        "MaxPriceTrendPercentageChange": "-10"
+      },
+      {
+        "MaxPriceTrendPercentageChange": "-5"
+		
+		//Pairs
+
+		
+		//DCA
+
+      },
+      {
+        "MaxPriceTrendPercentageChange": "7"
+      }
+    ]
+  },
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // N E W  C O I N S
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  "NewCoinsGrouping": {
+    "Configs": [
+      {
+        "CoinAge": "120",
+        "TimeUnit": "Days",
+        "Override": {
+          "SellOnlyModeEnabled": "true"
+        }
+      }
+    ]
+  },
+  
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // E X C H A N G E
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  "ExchangeGrouping": {
+    "Configs": [
+      {
+        "ExchangeName": "Bittrex",
+		
+		// Chaque palier de Offset "-10" = environ 50 points de moins
+		// Exemple : "MinBuyVolume": "500", => "MinBuyVolumeOffset": "-10" => Valeur bittrex : Min_Buy_Volume = 450
+        "MinBuyVolumeOffset": "-95"
+      }
+    ]
+  },
+  
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // C A N D L E  S I Z E
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  "AverageCandleSizeGrouping": {
+    "Configs": [
+      {
+        "MaxPercentageSizeOfPrice": "0.02",
+        "SellOnlyModeEnabled": "true",
+		
+		//Pairs
+        "ASellValueOffset": "-50", // gain
+		
+		//DCA
+		"DcaASellValueOffset": "-50" // gain
+      }
+    ]
+  },
+
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  // V O L A T I L I T Y
+  // -------------------------------------------------------------------------------------------------------------------------------------------------
+  "DownsideVolatilityGrouping": {
+    "Configs": [
+      {
+        "MaxChangeFromOpen": "1.5"
+      },
+      {
+        "MaxChangeFromOpen": "1000",
+        "SellOnlyModeEnabled": "true",
+		
+		//Pairs
+        "ASellValueOffset": "-50", // gain
+		
+		//DCA
+		"DcaASellValueOffset": "-50" // gain
+      }
+    ]
+  },
+
+  // ------------------------------------------------
+  // C O I N  S P E C I F I C  S E T T I N G S
+  // ------------------------------------------------
+  "Footer": { // Réglage en pied de page, ces réglages sont indépendent du reste du fichier.
+		"Pairs": {
+			
+		//Faire attention de toujours avoir quelques BNB pour réduire les frais de 50% sur Binance
+		"BNB_trading_enabled": "true",
+		"BNB_initial_cost_percentage": "1.35",
+		"BNB_reserve_amount": "10",
+
+		// Pour HOLD
+		"NEO_trading_enabled": "true",
+		"NEO_initial_cost_percentage": "1.35",
+		"NEO_reserve_amount": "1000",
+
+		// Pour HOLD
+		"XRP_trading_enabled": "true",
+		"XRP_initial_cost_percentage": "1.35",
+		"XRP_reserve_amount": "1000"
+		},
+		"Dca": {
+		//"DEFAULT_Dca_Max_Cost": "0",
+		//"DEFAULT_Dca_Min_Buy_Volume": "400"
+		},
+		"Indicators": {
+		//"Macd_Fast_Length": "12",
+		//"Macd_Signal": "9"
+		}
+	}
+}
