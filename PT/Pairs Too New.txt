@@ -1,0 +1,28 @@
+XXX_trading_enabled = false
+
+
+TOP50
+Listed for less than 180 days (2020.12.25)
+
+
+1INCH
+GRT
+XRPUP
+XRPDOWN
+YFI
+TRX
+DOT
+SUSHI
+FIL
+NBS
+PSG
+UNI
+EGLD
+SNX
+LTCUP
+XEM
+SXP
+AAVE
+INJ
+CRV
+ETHUP
