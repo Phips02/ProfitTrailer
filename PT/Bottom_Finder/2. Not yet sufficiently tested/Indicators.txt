@@ -1,0 +1,45 @@
+#
+# Achat a un prix fixe
+Prix_Fixe_source = ASK
+#-----------------------------------------------------------
+
+
+SOM_trigger_length = 288
+
+Atrpercentage_Indicator = EMA
+Atrpercentage_Candle_Period = 900
+Atrpercentage_Length = 50
+Atrpercentage_Offset = 1
+Atrpercentage_Only_Closed_Candles = true
+#-----------------------------------------------------------
+#
+Bottom_Finder_4h_BB_Candle_Period = 14400
+Bottom_Finder_4h_BB_Length = 20
+Bottom_Finder_4h_BB_Std = 2
+Bottom_Finder_4h_BB_Only_Closed_Candles = true
+#
+Bottom_Finder_1h_Emagain_Candle_Period = 3600
+Bottom_Finder_1h_Emagain_Cross_Candles = 80
+Bottom_Finder_1h_Emagain_Fast_Length = 8
+Bottom_Finder_1h_Emagain_Slow_Length = 13
+Bottom_Finder_1h_Emagain_Only_Closed_Candles = true
+#
+Bottom_Finder_1h_Emacross_Candle_Period = 3600
+Bottom_Finder_1h_Emacross_Cross_Candles = 80
+Bottom_Finder_1h_Emacross_Fast_Length = 8
+Bottom_Finder_1h_Emacross_Slow_Length = 13
+Bottom_Finder_1h_Emacross_Only_Closed_Candles = true
+#
+Bottom_Finder_1h_Rsi_Candle_Period = 3600
+Bottom_Finder_1h_Rsi_Length = 7
+Bottom_Finder_1h_Rsi_Only_Closed_Candles = true
+#
+Bottom_Finder_5min_Rsi_Candle_Period = 300
+Bottom_Finder_5min_Rsi_Length = 7
+Bottom_Finder_5min_Rsi_Only_Closed_Candles = true
+#
+Bottom_Finder_5min_Stoch_Candle_Period = 300
+Bottom_Finder_5min_Stoch_Length = 4
+Bottom_Finder_5min_Stoch_K = 1
+Bottom_Finder_5min_Stoch_D = 3
+Bottom_Finder_5min_Stoch_Only_Closed_Candles = true
