@@ -1,3 +1,6 @@
+#Not_stable
+
+
 DEFAULT_DCA_G_buy_strategy = PROFITPERCENTAGE
 DEFAULT_DCA_G_buy_value = -1
 
