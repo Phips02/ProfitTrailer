@@ -5,24 +5,26 @@ TOP50
 Listed for less than 180 days (2020.12.25)
 
 
-1INCH
-GRT
-XRPUP
-XRPDOWN
-YFI
-TRX
-DOT
-SUSHI
-FIL
-NBS
-PSG
-UNI
-EGLD
-SNX
-LTCUP
-XEM
-SXP
-AAVE
-INJ
-CRV
-ETHUP
+1INCH_trading_enabled = false
+AAVE_trading_enabled = false
+CRV_trading_enabled = false
+DOT_trading_enabled = false
+EGLD_trading_enabled = false
+ETHUP_trading_enabled = false
+FIL_trading_enabled = false
+GBP_trading_enabled = false
+GRT_trading_enabled = false
+INJ_trading_enabled = false
+LTCUP_trading_enabled = false
+NBS_trading_enabled = false
+PSG_trading_enabled = false
+SNX_trading_enabled = false
+SUSHI_trading_enabled = false
+SXP_trading_enabled = false
+TRX_trading_enabled = false
+UNI_trading_enabled = false
+XEM_trading_enabled = false
+XRPDOWN_trading_enabled = false
+XRPUP_trading_enabled = false
+YFI_trading_enabled = false
+
