@@ -15,6 +15,7 @@ FIL_trading_enabled = false
 GBP_trading_enabled = false
 GRT_trading_enabled = false
 INJ_trading_enabled = false
+LTCDOWN_trading_enabled = false
 LTCUP_trading_enabled = false
 NBS_trading_enabled = false
 PSG_trading_enabled = false
@@ -27,4 +28,3 @@ XEM_trading_enabled = false
 XRPDOWN_trading_enabled = false
 XRPUP_trading_enabled = false
 YFI_trading_enabled = false
-
