@@ -1,0 +1,22 @@
+
+
+MARKETCONDITIONS
+- SUPERBEAR 	"Weight": "96"
+- BEARISH 	"Weight": "97"
+- Sideways 	"Weight": "98"
+- BULLISH 	"Weight": "99"
+- SUPERBULL 	"Weight": "100"
+
+SNIPPETS
+- BuyStrat	"Weight": "115"
+- DcaBuyStrat	"Weight": "120"
+- BottomFinder	"Weight": "125"
+- DcaBottomFinder	"Weight": "130"
+
+StrategyGrouping
+- GoSuperBullStrategyGrouping	"Weight": "901"
+- PendingStrategyGrouping		"Weight": "902"
+- DcaStopLoss1Grouping		"Weight": "910"
+- DcaStopLoss2Grouping		"Weight": "911"
+- DcaStopLoss3Grouping		"Weight": "912"
+- DcaStopLoss4Grouping		"Weight": "913"
