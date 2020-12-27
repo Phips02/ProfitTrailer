@@ -17,7 +17,8 @@ DEFAULT_trading_enabled = true
 DEFAULT_trailing_buy = 0.1
 DEFAULT_trailing_buy_rebound_count = 1
 DEFAULT_DCA_enabled = -1
-DEFAULT_initial_cost = 2.5%
+#DEFAULT_initial_cost = 2.5%
+DEFAULT_initial_cost = 50
 
 #DEFAULT_buy_leverage = 10
 #DEFAULT_buy_margin_type = ISOLATED
@@ -66,7 +67,6 @@ DEFAULT_F_buy_strategy = STOCH
 DEFAULT_F_buy_value = 30
 DEFAULT_F_buy_value_limit = 0
 
-
 #--------------------------------------
 #Strategy / A un prix fixe
 #---------------------------------------
@@ -87,15 +87,15 @@ BTC_buy_strategy_formula = (A && B && C && D && E && F) || X || Y || Z
 #
 BTC_X_Buy_Strategy_Label = Prix_Fixe
 BTC_X_buy_strategy = FIXEDPRICE
-BTC_X_buy_value = 19268.00
+BTC_X_buy_value = 20252.00
 #
 BTC_Y_Buy_Strategy_Label = Prix_Fixe
 BTC_Y_buy_strategy = FIXEDPRICE
-BTC_Y_buy_value = 13166.00
+BTC_Y_buy_value = 14210.00
 #
 BTC_Z_Buy_Strategy_Label = Prix_Fixe
 BTC_Z_buy_strategy = FIXEDPRICE
-BTC_Z_buy_value = 8608.00
+BTC_Z_buy_value = 9622.00
 
 
 #--------------------------------------
@@ -155,7 +155,7 @@ DEFAULT_A_sell_value = 100
 #--------------------------------------
 #trading_enabled
 #---------------------------------------
-#List updated on December 25, 2020
+#List updated on December 27, 2020
 #Too New
 1INCH_trading_enabled = false
 AAVE_trading_enabled = false
@@ -167,6 +167,7 @@ FIL_trading_enabled = false
 GBP_trading_enabled = false
 GRT_trading_enabled = false
 INJ_trading_enabled = false
+LTCDOWN_trading_enabled = false
 LTCUP_trading_enabled = false
 NBS_trading_enabled = false
 PSG_trading_enabled = false
@@ -179,3 +180,5 @@ XEM_trading_enabled = false
 XRPDOWN_trading_enabled = false
 XRPUP_trading_enabled = false
 YFI_trading_enabled = false
+CTK_trading_enabled = false
+DGB_trading_enabled = false
