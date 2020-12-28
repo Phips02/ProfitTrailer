@@ -14,9 +14,16 @@ SNIPPETS
 - DcaBottomFinder	"Weight": "130"
 
 StrategyGrouping
-- GoSuperBullStrategyGrouping	"Weight": "901"
-- PendingStrategyGrouping		"Weight": "902"
-- DcaStopLoss1Grouping		"Weight": "910"
-- DcaStopLoss2Grouping		"Weight": "911"
-- DcaStopLoss3Grouping		"Weight": "912"
-- DcaStopLoss4Grouping		"Weight": "913"
+- GoSuperBullStrategyGrouping	"Weight": "801"
+- PendingStrategyGrouping		"Weight": "802"
+
+DynamicGainSizeGrouping
+-"TargetProfit": "7.5",
+-"TargetProfit": "5.5",
+-"TargetProfit": "3.5",
+
+- DcaStopLoss0Grouping		"Weight": "910"
+- DcaStopLoss1Grouping		"Weight": "915"
+- DcaStopLoss2Grouping		"Weight": "920"
+- DcaStopLoss3Grouping		"Weight": "925"
+- DcaStopLoss4Grouping		"Weight": "930"
