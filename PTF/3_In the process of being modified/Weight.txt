@@ -8,42 +8,23 @@ MARKETCONDITIONS
 - SUPERBULL 	"Weight": "100"
 
 SNIPPETS
-- BuyStrat	"Weight": "115"
-- DcaBuyStrat	"Weight": "120"
-- BottomFinder	"Weight": "125"
-- DcaBottomFinder	"Weight": "130"
-
+- BuyStrat		"Weight": "115"
+- DcaBuyStrat		"Weight": "120"
+- BottomFinder		"Weight": "125"
+ - SuperBearBottomFinder 	"Weight": "126"
+- DcaBottomFinder		"Weight": "130"
+ - SuperBearDcaBottomFinder "Weight": "131"
 -------------------------------------------------------------------------------------------
 StrategyGrouping
 
 GoSuperBullStrategyGrouping	"Weight": "801"
-PendingStrategyGrouping		"Weight": "802"
 
-"DynamicGainSizeGrouping"
-- "TargetProfit": "7.5",	"Weight": "850"
-- "TargetProfit": "5.5",	"Weight": "851"
-- "TargetProfit": "3.5",	"Weight": "852"
+DynamicDcaCoinCountGrouping	"Weight": "860"
 
-"DynamicDcaCostGrouping"
-- "DcaCoinCount": "1",	"Weight": "860"
-- "DcaCoinCount": "2",	"Weight": "861"
-- "DcaCoinCount": "3",	"Weight": "862"
-- "DcaCoinCount": "4",	"Weight": "863"
-- "DcaCoinCount": "5",	"Weight": "864"
-- "DcaCoinCount": "6",	"Weight": "865"
-- "DcaCoinCount": "7",	"Weight": "866"
-- "DcaCoinCount": "8",	"Weight": "867"
-- "DcaCoinCount": "9",	"Weight": "868"
-- "DcaCoinCount": "10",	"Weight": "869"
-- "DcaCoinCount": "11",	"Weight": "870"
-- "DcaCoinCount": "12",	"Weight": "871"
-- "DcaCoinCount": "13",	"Weight": "871"
-
-
- "DynamicDcaStopLossGrouping"
-- "DcaCount": "0",		"Weight": "910"
-- "DcaCount": "1",		"Weight": "915"
-- "DcaCount": "2",		"Weight": "920"
-- "DcaCount": "3",		"Weight": "925"
-- "DcaCount": "4",		"Weight": "930"
+DynamicDcaStopLossGrouping	
+"DcaCount": "0",			"Weight": "910"
+"DcaCount": "1",			"Weight": "915"
+"DcaCount": "2",			"Weight": "920"
+"DcaCount": "3",			"Weight": "925"
+"DcaCount": "4",			"Weight": "930"
 
